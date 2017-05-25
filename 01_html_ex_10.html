@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML 연습 10</title>
+</head>
+<body>
+
+<!--표 : 행×열( html : 행×칸 )-->
+
+<!--1×1 표-->
+<table border="1">
+  <tr>
+    <td>1×1 표</td>
+  </tr>
+</table>
+
+<!--2×2 표-->
+<table border="1">
+  <tr>
+    <td>1,1</td>
+    <td>2,1</td>
+  </tr>
+  <tr>
+    <td>1,2</td>
+    <td>2,2</td>
+  </tr>
+</table>
+
+<!--2×4 표-->
+<table border="1">
+  <tr>
+    <td>1,1</td>
+    <td>2,1</td>
+    <td>3,1</td>
+    <td>4,1</td>
+  </tr>
+  <tr>
+    <td>1,2</td>
+    <td>2,2</td>
+    <td>3,2</td>
+    <td>4,2</td>
+  </tr>
+</table>
+
+<!--성적표( 4×4 )-->
+
+<table border="1">
+
+  <caption>과목별 합계 성적표</caption>
+
+  <colgroup>
+    <col style="width:100px" />
+    <col style="width:100px" />
+    <col style="width:100px" />
+    <col style="width:100px" />
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">국어</th>
+      <th scope="col">영어</th>
+      <th scope="col">수학</th>
+    </tr>
+  </thead>
+
+  <tfoot>
+  <tr>
+    <th scope="row">과목별합계</th>
+    <td>140</td>
+    <td>140</td>
+    <td>140</td>
+  </tr>
+  </tfoot>
+
+  <tbody>
+    <tr>
+      <th scope="row">영희</th>
+      <td>90</td>
+      <td>90</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th scope="row">민수</th>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+    </tr>
+  </tbody>
+
+</table>
+
+<!--병합표-->
+<table border="1">
+  <tr>
+    <td rowspan="2">1,1</td>
+    <td colspan="2">2,1</td>
+    <!--<td>3,1</td> : (2,1)칸에서 2칸짜리로 늘렸기 때문에 필요 없음-->
+  </tr>
+  <tr>
+    <!--<td>2,1</td> : (1,1)칸에서 2칸짜리로 늘렸기 때문에 필요 없음-->
+    <td>2,2</td>
+    <td>3,2</td>
+  </tr>
+</table>
+
+<!--드림위버 작성표-->
+
+<table border="1" summary="확정된 시간표 모듈">
+  <caption>확정 모듈</caption>
+  <colgroup>
+    <col style="width:50px" />
+    <col style="width:50px" />
+    <col style="width:100px" />
+    <col style="width:100px" />
+    <col style="width:100px" />
+    <col style="width:100px" />
+    <col style="width:100px" />
+    <col style="width:100px" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th scope="col"><p>50분</p><p>(교시)</p></th>
+      <th scope="col"><p>75분</p><p>(교시)</p></th>
+      <th scope="col">시간</th>
+      <th scope="col">월</th>
+      <th scope="col">화</th>
+      <th scope="col">수</th>
+      <th scope="col">목</th>
+      <th scope="col">금</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2">1</td>
+      <td rowspan="3">1</td>
+      <td>09:00-09:30</td>
+      <td rowspan="2"> A</td>
+      <td rowspan="3">I</td>
+      <td rowspan="2">A</td>
+      <td rowspan="3">I</td>
+      <td rowspan="2">E</td>
+    </tr>
+    <tr>
+      <td>09:30-10:00</td>
+    </tr>
+    <tr>
+      <td rowspan="2">2</td>
+      <td>10:00-10:30</td>
+      <td rowspan="2">A</td>
+      <td rowspan="2">E</td>
+      <td rowspan="2">E</td>
+    </tr>
+    <tr>
+      <td rowspan="3">2</td>
+      <td>10:30-11:00</td>
+      <td rowspan="3">J</td>
+      <td rowspan="3">J</td>
+    </tr>
+    <tr>
+      <td rowspan="2">3</td>
+      <td>11:00-11:30</td>
+      <td rowspan="2">B</td>
+      <td rowspan="2">B</td>
+      <td rowspan="2">F</td>
+    </tr>
+    <tr>
+      <td>11:30-12:00</td>
+    </tr>
+    <tr>
+      <td rowspan="2">4</td>
+      <td rowspan="3">3</td>
+      <td>12:00-12:30</td>
+      <td rowspan="2">B</td>
+      <td rowspan="3">K</td>
+      <td rowspan="2">F</td>
+      <td rowspan="3">K</td>
+      <td rowspan="2">F</td>
+    </tr>
+    <tr>
+      <td>12:30-13:00</td>
+    </tr>
+    <tr>
+      <td rowspan="2">5</td>
+      <td>13:00-13:30</td>
+      <td rowspan="2">C</td>
+      <td rowspan="2">C</td>
+      <td rowspan="2">G</td>
+    </tr>
+    <tr>
+      <td rowspan="3">4</td>
+      <td>13:30-14:00</td>
+      <td rowspan="3">L</td>
+      <td rowspan="3">L</td>
+    </tr>
+    <tr>
+      <td rowspan="2">6</td>
+      <td>14:00-14:30</td>
+      <td rowspan="2">C</td>
+      <td rowspan="2">G</td>
+      <td rowspan="2">G</td>
+    </tr>
+    <tr>
+      <td>14:30-15:00</td>
+    </tr>
+    <tr>
+      <td rowspan="2">7</td>
+      <td rowspan="3">5</td>
+      <td>15:00-15:30</td>
+      <td rowspan="2">D</td>
+      <td rowspan="3">M</td>
+      <td rowspan="2">D</td>
+      <td rowspan="3">M</td>
+      <td rowspan="2">자율</td>
+    </tr>
+    <tr>
+      <td>15:30-16:00</td>
+    </tr>
+    <tr>
+      <td rowspan="2">8</td>
+      <td>16:00-16:30</td>
+      <td rowspan="2">D</td>
+      <td rowspan="2">H</td>
+      <td rowspan="2">자율</td>
+    </tr>
+    <tr>
+      <td rowspan="3">6</td>
+      <td>16:30-17:00</td>
+      <td rowspan="3">N</td>
+      <td rowspan="3">N</td>
+    </tr>
+    <tr>
+      <td rowspan="2">9</td>
+      <td>17:00-17:30</td>
+      <td rowspan="2">H</td>
+      <td rowspan="2">H</td>
+      <td rowspan="2">자율</td>
+    </tr>
+    <tr>
+      <td>17:30-18:00</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

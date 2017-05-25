@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML 연습 11</title>
+</head>
+<body>
+
+<h1>input 요소</h1>
+
+<fieldset>
+  <legend>회원가입</legend>
+
+  <div>
+    <label for="pid">아이디 :</label>
+    <input type="text" id="pid" placeholder="아이디를 입력해주세요." />
+  </div>
+
+  <div>
+    <label for="pwd">비밀번호 :</label>
+    <input type="password" id="pwd" />
+  </div>
+
+  <div>
+    <span>메일 수신 여부 :</span>
+    <span>
+      <input type="radio" id="radio-yes" name="mail" />
+      <label for="radio-yes">예</label>
+    </span>
+    <span>
+      <input type="radio" id="radio-no" name="mail" />
+      <label for="radio-no">아니오</label>
+    </span>
+  </div>
+
+  <div>
+    <span>관심 분야 :</span>
+    <span>
+      <input type="checkbox" id="chk-html" />
+      <label for="chk-html">HTML</label>
+    </span>
+    <span>
+      <input type="checkbox" id="chk-css" />
+      <label for="chk-css">CSS</label>
+    </span>
+    <span>
+      <input type="checkbox" id="chk-js" />
+      <label for="chk-js">Javascript</label>
+    </span>
+  </div>
+
+  <div>
+    <input type="submit" value="전송" />
+    <input type="reset" value="취소" />
+    <input type="button" value="확인" />
+    <input type="image" src="images/button.png" />
+  </div>
+
+  <div>
+    <label for="file-upload">파일 올리기 :</label>
+    <input type="file" id="file-upload" />
+  </div>
+
+  <div>
+    <input type="text" value="사용할 수 없음" disabled />
+    <input type="text" value="읽기 전용" readonly />
+  </div>
+
+</fieldset>
+
+<h1>textarea 요소</h1>
+
+<div>
+  <label for="reply">답글</label>
+  <textarea id="reply"></textarea>
+</div>
+
+<h1>select 요소</h1>
+<div>
+  <label>과목선택</label>
+  <select>
+    <option value="HTML5">HTML5</option>
+    <option value="CSS3">CSS3</option>
+    <option value="Javascript">Javascript</option>
+    <option value="jQuery">jQuery</option>
+  </select>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
