@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 연습 3 - 가상 클래스</title>
+  <style>
+    /*a 태그의 4가지 상태*/
+    a:link{
+      color:#333;
+    }
+
+    a:visited{
+      color:#333;
+    }
+
+    a:hover{
+      color:red;
+    }
+
+    a:active{
+      color:pink;
+    }
+
+    /*가상 클래스 선택자와 인접 선택자 활용*/
+    div>a:hover{
+      color:red;
+    }
+    div>a:hover+p{
+      color:skyblue;
+    }
+
+    /*가상클래스 세부조건 예제*/
+    ul>li:first-child{
+      color:red;
+    }
+
+    ul>li:nth-child(2){
+      color:green;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  가상 클래스(Pseudo Class)란, <br />
+  태그 요소의 세부 조건이나 특수 상태를 선택할 수 있게 해주는 선택자
+</p>
+
+<p>
+  a 태그는 링크의 상태를 4가지로 구분해 줄 수 있음.
+  기본상태, 방문한 상태, 마우스 닿았을 때(올렸을 때), 마우스버튼을 눌렀을때
+</p>
+
+<a href="http://www.naver.com">네이버</a>
+
+<p>
+  기본 상태 - :link<br />
+  방문한 상태 - :visited<br />
+  마우스 올렸을 때 - :hover<br />
+  마우스 버튼 눌렀을때 - :active
+</p>
+
+<p>가상 클래스 예제 - 인접 선택자 활용</p>
+<div>
+  <a href="#">다음</a>
+  <p>국내 최대 포털사이트</p>
+</div>
+
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>Javascript</li>
+</ul>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

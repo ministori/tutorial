@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 연습 - 가상 요소</title>
+  <style>
+    div:before{
+      content:"test";
+      display:block;
+      width:100px;
+      height:30px;
+      background:skyblue;
+    }
+    div:after{
+      content:"";
+      display:block;
+      width:100px;
+      height:30px;
+      background:skyblue;
+    }
+  </style>
+</head>
+<body>
+
+<div>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+  </ul>
+</div>
+
+</body>
+</html>
