@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 연습 9 - 박스모델 CSS</title>
+  <style>
+    .box1{
+      width:300px;
+      height:300px;
+      padding:30px; /* 4방향 공통적용 */
+      border:5px solid red; /* 축약 코딩 : 첫번째 값-굵기, 두번째 값-모양, 세번째 값-색 */
+      margin:60px;
+
+      background:skyblue;
+    }
+
+    .inner-box{
+      width:100%;
+      height:100%;
+      background:url(images/bg_image.jpg);
+    }
+
+    /*padding 값 사용법*/
+    .padding1{
+      padding:10px 30px; /* 왼쪽값 : 상하, 오른쪽값 : 좌우 쌍으로 적용 */
+    }
+
+    .padding2{
+      padding:10px 50px 200px; /* 왼쪽값 : 상, 중간값 : 좌우, 오른쪽값 : 하 로 적용 */
+    }
+
+    .padding3{
+      padding:10px 50px 100px 150px; /* 첫번째 값 : 상에 적용되고 시계방향으로 적용됨 : 상-우-하-좌  */
+    }
+
+    /*
+      4방향중 특정 방향의 padding 값을 적용하고자 할때
+      padding-left:10px;
+      padding-right:10px;
+      padding-top:10px;
+      padding-bottom:10px;
+    */
+
+    /*
+      margin 속성의 규칙은 padding과 똑같음.
+    */
+
+    /*테두리의 굵기, 모양, 색을 따로 지정*/
+    .border1{
+      border-width:1px;
+      border-style:dashed;
+      border-color:blue;
+    }
+
+    /*테두리의 방향에 따라서 각각 지정해 줄수 있음*/
+    .border2{
+      border-left:1px solid red;
+      border-right:10px solid red;
+      border-top:20px solid red;
+      border-bottom:30px solid red;
+    }
+
+    /*
+      조합해서 사용 가능
+
+      border-left-width
+      border-left-style
+      border-left-color
+      ...
+    */
+
+  </style>
+</head>
+<body>
+
+<div class="box1">
+  <div class="inner-box">
+    박스 모델
+  </div>
+</div>
+
+<div class="box1">
+  박스 모델
+</div>
+
+<div class="box1 padding1 border1">
+  <div class="inner-box">
+    박스 모델
+  </div>
+</div>
+
+<div class="box1 padding2 border2">
+  <div class="inner-box">
+    박스 모델
+  </div>
+</div>
+
+<div class="box1 padding3">
+  <div class="inner-box">
+    박스 모델
+  </div>
+</div>
+
+</body>
+</html>
