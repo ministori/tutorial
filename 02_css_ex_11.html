@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 연습 11 - 레이아웃</title>
+  <style>
+    .block{
+      width:100px;
+      height:100px;
+      padding:20px;
+      border:5px solid red;
+      margin:30px;
+    }
+
+    .inline{
+      width:100px;
+      height:100px;
+      padding:20px;
+      border:5px solid red;
+      margin:30px;
+    }
+
+    /*요소의 성격 변경*/
+    .block-to-inline{
+      display:inline;
+
+      width:100px;
+      height:100px;
+      padding:20px;
+      border:5px solid red;
+      margin:30px;
+    }
+
+    .inline-to-block{
+      display:block;
+
+      width:100px;
+      height:100px;
+      padding:20px;
+      border:5px solid red;
+      margin:30px;
+    }
+
+    .inline-block{
+      display:inline-block;
+
+      width:100px;
+      height:100px;
+      padding:20px;
+      border:5px solid red;
+      margin:30px;
+    }
+
+    .hidden{
+      display:none;
+    }
+
+    .layout{
+      width:20%;
+      padding:30px;
+      border:5px solid red;
+      float:left;
+    }
+
+    .box{
+      height:100px;
+      background:gold;
+    }
+
+    .display-none{
+      display:none;
+    }
+
+    .visibility-hidden{
+      visibility: hidden;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+<p>
+  블럭요소와 인라인 요소의 박스모델 CSS Property 적용 차이점
+</p>
+
+<div class="block">블럭 요소</div>
+
+<div>
+  <span class="inline">인라인 요소</span>
+</div>
+
+<br /><br /><br />
+
+<p>
+  인라인 요소는 width, height 적용되지 않고, 상하 margin이 적용되지 않고, padding, border 적용되어도 해당 부분이 인지되지 않음.
+</p>
+
+<br /><br /><br />
+
+<div class="block-to-inline">블럭 요소</div>
+
+<div>
+  <span class="inline-to-block">인라인 요소</span>
+</div>
+
+<p>
+  inline-block 속성 값의 특징 <br />
+  inline 요소의 성질과 block 요소의 성질 모두 갖는다.
+</p>
+
+<div>
+  <span class="inline-block">인라인 요소</span>
+  <span class="inline-block">인라인 요소</span>
+</div>
+
+<div class="hidden">박스 숨기기</div>
+
+<div class="layout">
+
+  <div class="box">box1</div>
+  <div class="box">box2</div>
+  <div class="box">box3</div>
+
+</div>
+
+<div class="layout">
+
+  <div class="box">box1</div>
+  <div class="box display-none">box2</div>
+  <div class="box">box3</div>
+
+</div>
+
+<div class="layout">
+
+  <div class="box">box1</div>
+  <div class="box visibility-hidden">box2</div>
+  <div class="box">box3</div>
+
+</div>
+
+</body>
+</html>
