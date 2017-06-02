@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 연습 13 - 레이아웃 구성 연습</title>
+  <style>
+    .header{
+      width:100%;
+      height:100px;
+      background:greenyellow;
+    }
+
+    .container{
+      width:100%;
+      background:#dddddd;
+    }
+
+    .container:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+
+    .side-menu{
+      width:20%;
+      height:400px;
+      background: yellow;
+      float:left;
+    }
+
+    .content{
+      width:80%;
+      height:800px;
+      background: palevioletred;
+      float:left;
+    }
+
+    .footer{
+      width:100%;
+      height:300px;
+      background:#333;
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">header</header>
+
+<section class="container">
+
+  <nav class="side-menu">side menu</nav>
+
+  <section class="content">Content</section>
+
+</section>
+
+<footer class="footer">footer</footer>
+
+</body>
+</html>

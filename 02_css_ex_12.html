@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 연습 12 - position 속성</title>
+  <style>
+    /*parent box의 기본 스타일*/
+    .layout{
+      width:500px;
+      height:300px;
+      border:5px solid red;
+    }
+
+    .position-relative{
+      position:relative;
+    }
+
+    /*child box의 기본 공통 스타일*/
+    .box{
+      width:50px;
+      height:50px;
+      background:greenyellow;
+    }
+
+    /*relative 예제*/
+    .relative1-1{
+      background:cornflowerblue;
+      position:relative;
+      top:30px;
+      left:30px;
+    }
+
+    /*absolute 예제*/
+    .absolute1-1{
+      background:palevioletred;
+      position:absolute;
+      top:10px;
+      left:100px;
+    }
+
+    .absolute2-1{
+      background:palevioletred;
+      position:absolute;
+      top:10px;
+      left:10px;
+    }
+
+    .absolute2-2{
+      position:absolute;
+    }
+
+    .zindex{
+      z-index: 10;
+    }
+
+    .fixed-box{
+      width:100%;
+      height:50px;
+      background:burlywood;
+      position:fixed;
+      top:0;
+      left:0; /*숫자값이 0일때 단위를 쓰지 않음*/
+    }
+
+  </style>
+</head>
+<body>
+
+<p>
+  relative와 absolute 속성값의 기본 성격과 차이점 <br />
+  1. relative는 좌표로 이동배치 되어도 원래 자리의 영역을 유지 / absolute는 배치이동되면 원래자리를 유지하지 않음 <br />
+  2. relative는 parent를 기준으로 배치되지만, absolute는 body를 기준으로 배치됨 <br />
+  3. childe box에 position:absolute를 적용할 때 parent box도 position:relative/absolute 속성을 적용하면 <br />
+     child box가 parent를 기준으로 배치됨.
+  4. position 속성이 적용된 box와 적용되지 않은 box가 겹칠 때 position 속성이 적용된 박스가 앞으로 나옴.
+  5. position 속성이 모두 적용된 box가 겹칠때 html 순서상 아래 box가 앞으로 나옴.
+</p>
+
+<!--position 속성값 relative 예제-->
+<div class="layout">
+
+  <div class="box relative1-1">box1</div>
+  <div class="box relative1-2">box2</div>
+
+</div>
+
+<!--position 속성값 absolute 예제-->
+<div class="layout">
+
+  <div class="box absolute1-1">box1</div>
+  <div class="box absolute1-2">box2</div>
+
+</div>
+
+<div class="layout position-relative">
+
+  <div class="box absolute1-1">box1</div>
+  <div class="box absolute1-2">box2</div>
+
+</div>
+
+<div class="layout position-relative">
+
+  <div class="box absolute2-1 zindex">box1</div>
+  <div class="box absolute2-2">box2</div>
+
+</div>
+
+<p>
+  1. position:fixed 를 사용하면 무조건 브라우저를 기준으로 배치
+  2. 브라우저에 붙게 되기 때문에 스크롤 할때 같이 스크롤되지 않음.
+</p>
+
+<div class="fixed-box">고정박스</div>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+
+
+</body>
+</html>
