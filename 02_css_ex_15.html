@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>레이아웃 연습 1</title>
+  <style>
+    .header{
+      width:100%;
+      height:100px;
+      background:#aaa;
+    }
+
+    .logo{
+      width:100px;
+      height:50px;
+      border:1px solid #333;
+    }
+
+    .container{
+      width:100%;
+      background:#ddd;
+    }
+
+    .top-wrap{
+      width:100%;
+    }
+
+    .top-wrap:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+
+    .left-wrap{
+      width:70%;
+      float:left;
+    }
+
+    .left-wrap-top{
+      width:100%;
+    }
+
+    .left-wrap-top:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+
+    .left-wrap-top-left{
+      width:30%;
+      height:300px;
+      background:greenyellow;
+      float:left;
+    }
+
+    .left-wrap-top-right{
+      width:70%;
+      height:300px;
+      float:left;
+    }
+
+    .left-wrap-top-right-top{
+      width:100%;
+      height:150px;
+      background:olive;
+    }
+
+    .left-wrap-top-right-bottom{
+      width:100%;
+      height:150px;
+      background:olivedrab;
+    }
+
+    .left-wrap-bottom{
+      width:100%;
+      height:300px;
+      background: mediumorchid;
+    }
+
+    .right-wrap{
+      width:30%;
+      height:600px;
+      float:left;
+      background:skyblue;
+    }
+
+    .bottom-wrap{
+      width:100%;
+    }
+
+    .bottom-wrap:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+
+    .bottom-wrap-left{
+      width:35%;
+      height:100px;
+      background:lightcoral;
+      float:left;
+    }
+
+    .bottom-wrap-center{
+      width:35%;
+      height:100px;
+      background:hotpink;
+      float:left;
+    }
+
+    .bottom-wrap-right{
+      width:30%;
+      height:100px;
+      background:fuchsia;
+      float:left;
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <h1 class="logo">logo</h1>
+</header>
+
+<section class="container">
+
+  <div class="top-wrap">
+
+    <div class="left-wrap">
+
+      <div class="left-wrap-top">
+
+        <div class="left-wrap-top-left">1</div>
+
+        <div class="left-wrap-top-right">
+          <div class="left-wrap-top-right-top">2</div>
+          <div class="left-wrap-top-right-bottom">3</div>
+        </div>
+
+      </div>
+
+      <div class="left-wrap-bottom">4</div>
+
+    </div>
+
+    <div class="right-wrap">5</div>
+
+  </div>
+
+  <div class="bottom-wrap">
+
+    <div class="bottom-wrap-left">6</div>
+    <div class="bottom-wrap-center">7</div>
+    <div class="bottom-wrap-right">8</div>
+
+  </div>
+
+</section>
+
+</body>
+</html>
