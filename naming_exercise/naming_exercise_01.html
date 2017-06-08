@@ -5,6 +5,28 @@
   <title>네이밍 연습 1 - gnb 영역 작업</title>
   <link rel="stylesheet" href="reset.css" />
   <link rel="stylesheet" href="naming_exercise_01.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    $(function(){
+
+      $('.gnb-depth1-link').on('mouseenter', function(){
+        $(this).next('.gnb-depth2').css('display', 'block');
+      });
+
+      $('.gnb').on('mouseleave', function(){
+        $(this).find('.gnb-depth2').css('display', 'none');
+      });
+
+      $('.gnb-depth2-link').on('mouseenter', function(){
+        $(this).next('.gnb-depth3').css('display', 'block');
+      });
+
+      $('.gnb').on('mouseleave', function(){
+        $(this).children('.gnb-depth3').css('display', 'none');
+      });
+
+    });
+  </script>
 </head>
 <body>
 
@@ -114,20 +136,20 @@
 
     <li class="gnb-depth1-item">
       <a href="#" class="gnb-depth1-link">한국민속촌소개</a>
-      <ul class="gnb-depth2">
+      <ul class="gnb-depth2 last">
         <li class="gnb-depth2-item">
           <a href="#" class="gnb-depth2-link">한국민속촌소개</a>
           <ul class="gnb-depth3 depth3-5">
             <li class="gnb-depth3-item">
-              <a href="#" class="gnb-depth3-link">민속촌소개</a>
+              <a href="#" class="gnb-depth3-link">민속촌 소개</a>
             </li>
             <li class="gnb-depth3-item">
-              <a href="#" class="gnb-depth3-link">시설및현황</a>
+              <a href="#" class="gnb-depth3-link">시설 및 현황</a>
             </li>
           </ul>
         </li>
         <li class="gnb-depth2-item">
-          <a href="#" class="gnb-depth2-link">과거그리고미래</a>
+          <a href="#" class="gnb-depth2-link">과거 그리고 미래</a>
           <ul class="gnb-depth3 depth3-6">
             <li class="gnb-depth3-item">
               <a href="#" class="gnb-depth3-link">민속촌의 발자취</a>
