@@ -90,12 +90,37 @@
 .gnb-depth3{
   position:absolute;
   top:40px;
-  left:0;
+  /*left:0;*/
   width:1000px;
   height:36px;
   background:#e6710c;
   padding-left:10px;
 }
+
+.gnb-depth3.depth3-1{
+  width:823px;
+}
+
+.gnb-depth3.depth3-2{
+  width:751px;
+}
+
+.gnb-depth3.depth3-3{
+  width:489px;
+}
+
+.gnb-depth3.depth3-4{
+  width:417px;
+}
+
+.gnb-depth3.depth3-5{
+  width:165px;
+}
+
+.gnb-depth3.depth3-6{
+  width:823px;
+}
+
 
 .gnb-depth3:after{
   content:"";
