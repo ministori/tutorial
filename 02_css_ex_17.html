@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>레이아웃 연습 1</title>
+  <style>
+    .container{
+      padding:20px;
+      background:#333;
+    }
+
+    .container:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+
+    .box1x1{
+      width:25%;
+      height:100px;
+    }
+
+    .box1x2{
+      width:25%;
+      height:200px;
+    }
+
+    .box1x3{
+      width:25%;
+      height:300px;
+    }
+
+    .box2x1{
+      width:50%;
+      height:100px;
+    }
+
+    .box3x1{
+      width:75%;
+      height:100px;
+    }
+
+    .box2x3{
+      width:50%;
+      height:300px;
+    }
+
+    .box1{
+      background:orange;
+      float:left;
+    }
+
+    .box2{
+      float:left;
+      background:purple;
+    }
+
+    .box3{
+      float:right;
+      background:darkcyan;
+    }
+
+    .box4{
+      float:left;
+      background:cyan;
+    }
+
+    .box5{
+      float:right;
+      background:orangered;
+    }
+
+    .box6{
+      float:left;
+      background:darkblue;
+    }
+
+    .box7{
+      float:left;
+    }
+
+    .box7-1{
+      height:100px;
+      background:cornflowerblue;
+    }
+
+    .box7-2{
+      height:200px;
+      background:magenta;
+    }
+
+    .box8{
+      float:left;
+      background:yellow;
+    }
+
+    .box10{
+      float:left;
+      background:dodgerblue;
+    }
+
+    .box11{
+      float:right;
+      background:yellowgreen;
+    }
+    .box12{
+      float:right;
+      background:lightcoral;
+    }
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+<section class="container">
+
+  <div class="box1x2 box1">1</div>
+  <div class="box2x1 box2">2</div>
+  <div class="box1x1 box3">3</div>
+  <div class="box1x1 box4">4</div>
+  <div class="box2x3 box5">5</div>
+  <div class="box2x1 box6">6</div>
+  <div class="box1x3 box7">
+    <div class="box7-1">7-1</div>
+    <div class="box7-2">7-2</div>
+  </div>
+  <div class="box1x2 box8">8</div>
+  <div class="box1x1 box10">10</div>
+  <div class="box1x1 box11">11</div>
+  <div class="box3x1 box12">12</div>
+
+
+</section>
+
+</body>
+</html>

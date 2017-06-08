@@ -53,6 +53,7 @@
 
 .gnb-depth1-item{
   float:left;
+  width:16.66%;
 }
 
 .gnb-depth1-link{
@@ -76,14 +77,24 @@
 
 .gnb-depth2-item{
   float:left;
+  margin-top:9px;
+  margin-right:20px;
 }
 
 .gnb-depth2-link{
   color:#fff;
+  display:block;
+  padding:3px 0;
 }
 
 .gnb-depth3{
   position:absolute;
+  top:40px;
+  left:0;
+  width:1000px;
+  height:36px;
+  background:#e6710c;
+  padding-left:10px;
 }
 
 .gnb-depth3:after{
@@ -94,4 +105,11 @@
 
 .gnb-depth3-item{
   float:left;
+  margin-top:9px;
+  margin-right:20px;
+}
+
+.gnb-depth3-link{
+  color:#fdfdfd;
+  display:block;
 }
