@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML 종합 연습</title>
+</head>
+<body>
+
+<h1>자바스크립트</h1>
+<hr />
+<p>위키백과, 우리 모두의 백과사전.</p>
+
+<p>
+  자바스크립트(영어: JavaScript)는 객체 기반의 스크립트 프로그래밍 언어이다. 이 언어는 웹브라우저 내에서 주로 사용하며, 다른 응용 프로그램의 내장 객체에도 접근할 수 있는 기능을 가지고 있다. 또한 Node.js와 같은 런타임 환경과 같이 서버 사이드 네트워크 프로그래밍에도 사용되고 있다. 자바스크립트는 본래 넷스케이프 커뮤니케이션즈 코퍼레이션의 브렌던 아이크(Brendan Eich)가 처음에는 모카(Mocha)라는 이름으로, 나중에는 라이브스크립트(LiveScript)라는 이름으로 개발하였으며, 최종적으로 자바스크립트가 되었다. 자바스크립트가 썬 마이크로시스템즈의 자바와 구문(syntax)이 유사한 점도 있지만, 이는 사실 두 언어 모두 C 언어의 기본 구문을 바탕했기 때문이고, 자바와 자바스크립트는 직접적인 관련성이 없다. 이름과 구문 외에는 자바보다 셀프와 유사성이 많다.
+</p>
+<p>
+  2013년 1월 기준으로, 가장 최근 버전은 자바스크립트 1.8.5이고[1], 파이어폭스 3에서 지원된다. 표준 ECMA-262 3판에 대응하는 자바스크립트 버전은 1.5이다. ECMA스크립트는 쉽게 말해 자바스크립트의 표준화된 버전이다. 모질라 1.8 베타 1이 나오면서 XML에 대응하는 확장 언어인 E4X(ECMA-357)를 부분 지원하게 되었다. 자바스크립트는 브라우저마다 지원되는 버전이 다르며, 가장 범용적으로 지원되는 버전은 1.5이다.[출처 필요]
+</p>
+
+<table border="1">
+  <tr>
+    <td>
+
+      <p>목차</p>
+
+      <ol>
+        <li>자바와 자바스크립트, 그리고 J스크립트</li>
+        <li>상표</li>
+        <li>헬로 월드 프로그램</li>
+        <li>같이 보기</li>
+        <li>참고 문헌</li>
+        <li>바깥 고리</li>
+      </ol>
+    </td>
+  </tr>
+</table>
+
+<h2>자바와 자바스크립트, 그리고 J스크립트</h2>
+<hr />
+<p>
+  라이브스크립트의 이름이 자바스크립트로 변경된 것은 대략 넷스케이프가 자사의 넷스케이프 네비게이터 웹 브라우저에 자바 기술에 대한 지원을 포함하기 시작할 즈음이다. 자바스크립트는 1995년 12월 출시된 넷스케이프 2.0B3에서부터 공개, 채택되었다. 자바스크립트라는 이름은 상당한 혼란을 가져왔다. 이것은 자바와 자바스크립트 간에는 구문이 유사하다는 점(양쪽 모두 C에 바탕을 두었기 때문에) 외에는 실제 관련성이 없었기 때문이다. 두 언어는 의미론적으로 매우 다르고, 특히 각각의 객체 모델은 관련성이 없는데다가 상당 부분이 호환되지 않는다.
+</p>
+<p>
+  웹 페이지 향상 언어로서 자바스크립트의 성공에 자극 받은 마이크로소프트는 J스크립트로 알려진 호환 언어를 개발하게 되었다. J스크립트는 1996년 8월에 출시된 인터넷 익스플로러 브라우저 3.0부터 지원 되기 시작했다. IE 브라우저에서의 자바스크립트 사용은 실제로는 J스크립트의 사용을 의미하는 것이었다. 이에 대한 표준화 요구는 ECMA스크립트에 대한 ECMA-262 표준의 기반이 되었으며, 1996년 11월 이후 세 번째 판까지 출판됐다. 자바스크립트와 함께 자주 쓰이는 용어인 DOM은 사실 ECMA스크립트 표준의 일부가 아니며, 그것은 자체로 하나의 표준이고 XML에 기반한다.
+</p>
+
+<h2>상표</h2>
+<hr />
+<p>
+  "자바스크립트"(JavaScript)는 오라클의 상표이다.[2] 넷스케이프 커뮤니케이션스가 발명, 구현한 기술 및 모질라 재단과 같은 독립 기관의 라이선스 하에 사용된다.[3]
+</p>
+
+<h2>헬로 월드 프로그램</h2>
+<hr />
+<p>
+  아래는 자바스크립트의 헬로 월드 프로그램이며, 점선 내부가 자바스크립트로 처리된 부분을 설명한다.
+</p>
+
+<table border="1">
+  <tr>
+    <td>
+      <xmp>
+
+  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+  <html>
+    <head>
+      <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+      <title>자바스크립트 페이지</title>
+      <script type="text/javascript">
+        document.write("<p>Hello World!</p>");
+      </script>
+    </head>
+    <body>
+      <noscript>
+         <p>브라우저가 자바스크립트 기능을 지원하지 않거나 자바스크립트 기능이 꺼져 있습니다.</p>
+      </noscript>
+    </body>
+  </html>
+
+      </xmp>
+    </td>
+  </tr>
+</table>
+
+<h2>같이 보기</h2>
+<hr />
+
+<ul>
+  <li><a href="https://ko.wikipedia.org/wiki/%EC%BD%94%EB%B8%8C%EB%9D%BC%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8?action=edit&veswitched=1">코브라스크립트</a></li>
+  <li><a href="https://ko.wikipedia.org/w/index.php?title=%EB%9D%BC%EC%9D%B4%EB%B8%8C%EC%BB%A4%EB%84%A5%ED%8A%B8&action=edit&redlink=1">라이브커넥트</a></li>
+  <li><a href="https://ko.wikipedia.org/wiki/DHTML">DHTML</a></li>
+  <li><a href="https://ko.wikipedia.org/w/index.php?title=%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_%EC%97%94%EC%A7%84&action=edit&redlink=1">자바스크립트 엔진</a></li>
+  <li><a href="https://ko.wikipedia.org/wiki/Ajax">Ajax</a></li>
+  <li><a href="https://ko.wikipedia.org/wiki/JQuery">jQuery</a></li>
+  <li><a href="https://ko.wikipedia.org/wiki/Prototype_%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC">Prototype 자바스크립트 프레임워크</a></li>
+</ul>
+
+</body>
+</html>
