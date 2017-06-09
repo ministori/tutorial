@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>가운데 정렬</title>
+  <style>
+    /* 1-1. 텍스트, 인라인 요소 가운데 정렬 */
+    .text-align{
+      text-align:center;
+      background:yellow;
+    }
+    .fix-width{
+      width:300px;
+    }
+    .pos-absolute{
+      position:absolute;
+      top:100px;
+      right:0;
+    }
+
+    /* 1-2. 블럭요소 가운데 정렬 */
+    .block-center{
+      /* 좌우 margin을 auto로 설정 */
+      margin:0 auto;
+      background:greenyellow;
+    }
+
+    .wrap-width{
+      width:500px;
+      background:lightcoral;
+    }
+
+    /* 1-3. absolute를 적용해서 가운데 정렬 */
+    .pos-relative{
+      height:30px;
+      position:relative;
+      background:cornflowerblue;
+    }
+
+    .absolute-center{
+      position:absolute;
+      top:10px;
+      left:50%;
+      margin-left:-150px;
+      background:magenta;
+    }
+
+    /* 2. 세로 가운데 정렬 */
+    /*2-1. 줄간격 사용한 세로 가운데 정렬*/
+    .wrap-height{
+      height:200px;
+      background:lightskyblue;
+      position:relative;
+    }
+
+    .vertical-align1{
+      line-height:200px;
+    }
+
+    .absolute-vt-center{
+      height:40px;
+      position:absolute;
+      top:50%;
+      margin-top:-20px;
+      background:orange;
+    }
+
+
+  </style>
+</head>
+<body>
+
+<!--1. 가로방향 가운데 정렬-->
+
+<!--1-1. 텍스트, 인라인 요소 가운데 정렬-->
+<div class="text-align">
+  텍스트 가운데 정렬
+</div>
+
+<div class="text-align">
+  <span>텍스트 가운데 정렬</span>
+</div>
+
+<div>
+  <span class="text-align">텍스트 가운데 정렬</span>
+</div>
+
+<div class="text-align fix-width">
+  텍스트 가운데 정렬
+</div>
+
+<div class="text-align pos-absolute fix-width">
+  텍스트 가운데 정렬
+</div>
+
+<br /><br /><br /><br /><br /><br />
+
+<!--1-2. 가로길이 지정된 블럭요소의 가운데 정렬-->
+<div class="wrap-width">
+  <div class="fix-width block-center">
+    블럭요소 가운데 정렬
+  </div>
+</div>
+
+<br /><br /><br /><br /><br /><br />
+
+<!--1-3. position:absolute 를 적용해서 가운데 정렬-->
+<div class="wrap-width pos-relative">
+  <div class="fix-width absolute-center">
+    position:absolute 로 박스 가운데 정렬
+  </div>
+</div>
+
+<br /><br /><br /><br /><br /><br />
+
+<!--2. 세로 방향 가운데 정렬-->
+
+<!--2-1. 줄간격을 사용한 세로 가운데 정렬 - 텍스트, 인라인 요소 세로 가운데 정렬-->
+<div class="wrap-height vertical-align1">
+  텍스트 세로 정렬
+</div>
+
+<br /><br /><br /><br /><br /><br />
+
+<div class="wrap-height vertical-align1">
+  <span>텍스트 세로 정렬</span>
+</div>
+
+<br /><br /><br /><br /><br /><br />
+
+<!--여러줄이 생기는 경우에는 줄간격을 이용해서 세로 가운데 정렬할 수 없음-->
+<div class="wrap-height vertical-align1 fix-width">
+  텍스트 세로 정렬텍스트 세로 정렬텍스트 세로 정렬텍스트 세로 정렬텍스트 세로 정렬
+</div>
+
+<br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br />
+
+<!--2-2. position:absolute 를 적용해서 세로 가운데 정렬 하는 방법-->
+<div class="wrap-height">
+  <div class="absolute-vt-center">
+    박스 세로 정렬
+  </div>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

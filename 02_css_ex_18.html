@@ -4,17 +4,6 @@
   <meta charset="UTF-8">
   <title>레이아웃 연습 1</title>
   <style>
-    .container{
-      padding:20px;
-      background:#333;
-    }
-
-    .container:after{
-      content:"";
-      display:block;
-      clear:both;
-    }
-
     .box1x1{
       width:25%;
       height:100px;
@@ -47,64 +36,84 @@
 
     .box1{
       background:orange;
-      float:left;
+      position:absolute;
+      top:0;
+      left:0;
     }
 
     .box2{
-      float:left;
+      position:absolute;
+      top:0;
+      left:25%;
       background:purple;
     }
 
     .box3{
-      float:right;
+      position:absolute;
+      top:0;
+      left:75%;
       background:darkcyan;
     }
 
     .box4{
-      float:left;
+      position:absolute;
+      top:100px;
+      left:25%;
       background:cyan;
     }
 
     .box5{
-      float:right;
+      position:absolute;
+      top:100px;
+      left:50%;
       background:orangered;
     }
 
     .box6{
-      float:left;
+      position:absolute;
+      top:200px;
+      left:0;
       background:darkblue;
     }
 
     .box7{
-      float:left;
-    }
-
-    .box7-1{
-      height:100px;
-      background:cornflowerblue;
-    }
-
-    .box7-2{
-      height:200px;
-      background:magenta;
+      position:absolute;
+      top:300px;
+      left:0;
+      background:orchid;
     }
 
     .box8{
-      float:left;
+      position:absolute;
+      top:300px;
+      left:25%;
       background:yellow;
     }
 
+    .box9{
+      position:absolute;
+      top:400px;
+      left:0;
+      background:cornflowerblue;
+    }
+
     .box10{
-      float:left;
+      position:absolute;
+      top:400px;
+      left:50%;
       background:dodgerblue;
     }
 
     .box11{
-      float:right;
+      position:absolute;
+      top:400px;
+      left:75%;
       background:yellowgreen;
     }
     .box12{
-      float:right;
+      position:absolute;
+      top:500px;
+      left:25%;
       background:lightcoral;
     }
   </style>
@@ -119,11 +128,9 @@
   <div class="box1x1 box4">4</div>
   <div class="box2x3 box5">5</div>
   <div class="box2x1 box6">6</div>
-  <div class="box1x3 box7">
-    <div class="box7-1">7-1</div>
-    <div class="box7-2">7-2</div>
-  </div>
+  <div class="box1x3 box7">7</div>
   <div class="box1x2 box8">8</div>
+  <div class="box1x2 box9">9</div>
   <div class="box1x1 box10">10</div>
   <div class="box1x1 box11">11</div>
   <div class="box3x1 box12">12</div>
