@@ -8,29 +8,91 @@
       float:left;
     }
 
-    .box1x1{
-      width:10%;
-      height:100px;
+    .box1{
+      width:40%;
     }
 
-    .box2x1{
+    .box2{
+      width:10%;
+    }
+
+    .box3{
       width:20%;
-      height:100px;
     }
 
-    .box1x2{
+    .box4{
       width:10%;
-      height:200px;
     }
 
-    .box2x2{
+    .box4{
       width:20%;
-      height:200px;
     }
 
-    .box1x1{
-      width:10%;
+    .box1-top{
+      width:100%;
       height:100px;
+      background:#333;
+    }
+
+    .box1-mid-top:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+
+    .box1-mid-top-left{
+      float:left;
+      width:25%;
+      height:200px;
+      background:#666;
+    }
+
+    .box1-mid-top-center{
+      float:left;
+      width:50%;
+    }
+
+    .box1-mid-top-center-top{
+      width:100%;
+      height:100px;
+      background:#999;
+    }
+
+    .box1-mid-top-center-bottom:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+
+    .box1-mid-top-center-bottom-left{
+      width:50%;
+      height:100px;
+      background:#bbb;
+      float:left;
+    }
+
+    .box1-mid-top-center-bottom-right{
+      width:50%;
+      height:100px;
+      float:left;
+      background:#ddd;
+    }
+
+    .box1-mid-top-right{
+      float:left;
+      width:25%;
+    }
+
+    .box1-mid-top-right-top{
+      width:100%;
+      height:100px;
+      background:#ddd;
+    }
+
+    .box1-mid-top-right-bottom{
+      width:100%;
+      height:100px;
+      background:#333;
     }
 
   </style>
@@ -39,7 +101,20 @@
 
 <div class="box box1">
   <div class="box1-top"></div>
-  <div class="box1-mid-top"></div>
+  <div class="box1-mid-top">
+    <div class="box1-mid-top-left"></div>
+    <div class="box1-mid-top-center">
+      <div class="box1-mid-top-center-top"></div>
+      <div class="box1-mid-top-center-bottom">
+        <div class="box1-mid-top-center-bottom-left"></div>
+        <div class="box1-mid-top-center-bottom-right"></div>
+      </div>
+    </div>
+    <div class="box1-mid-top-right">
+      <div class="box1-mid-top-right-top"></div>
+      <div class="box1-mid-top-right-bottom"></div>
+    </div>
+  </div>
   <div class="box1-mid-bottom"></div>
   <div class="box1-bottom"></div>
 </div>
