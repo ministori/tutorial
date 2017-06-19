@@ -1,8 +1,13 @@
-# html_tut
-HTML tutorial 연습 소스
+# Tutorial
 
-1. HTML Element 설명/연습용 소스
+Tutorial 연습 소스
 
-2. 구조 연습 소스
+1. HTML
 
-3. 페이지 제작 연습 소스
+- 01_html_ex_01.html : HTML 기초 구조 예제 [소스바로가기](https://github.com/ministori/tutorial/blob/master/01_html_ex_01.html)
+
+2. CSS
+
+3. 구현 기법 정리
+
+4. GNB 제작 및 네이밍 연습
