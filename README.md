@@ -42,10 +42,10 @@ Tutorial 연습 소스
 
 - [02_css_ex_15.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_15.html) : 복잡한 레이아웃 연습 1
 - [02_css_ex_16.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_16.html) : 복잡한 레이아웃 연습 2
-- [02_css_ex_17.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_17.html) : 복잡한 레이아웃 연습 3
-- [02_css_ex_18.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_18.html) : 복잡한 레이아웃 연습 4
-- [02_css_ex_19.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_19.html) : 복잡한 레이아웃 연습 5
-- [02_css_ex_20.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_20.html) : 복잡한 레이아웃 연습 6
+- [02_css_ex_17.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_17.html) : 복잡한 레이아웃 연습 3-1
+- [02_css_ex_18.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_18.html) : 복잡한 레이아웃 연습 3-2
+- [02_css_ex_19.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_19.html) : 복잡한 레이아웃 연습 4
+- [02_css_ex_20.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_20.html) : 복잡한 레이아웃 연습 5
 
 
 3. 구현 기법 정리
