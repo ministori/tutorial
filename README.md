@@ -36,8 +36,17 @@ Tutorial 연습 소스
 - [02_css_ex_11.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_11.html) : 블럭요소 / 인라인 요소의 박스모델 CSS 적용 차이점
 - [02_css_ex_12.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_12.html) : position
 - [02_css_ex_13.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_13.html) : 웹사이트 기초 레이아웃 구성
+
+![layout 연습](./images/layout_ex.jpg)
+
 - [02_css_ex_14.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_14.html) : 웹사이트 3단 레이아웃 구성
 - [02_css_ex_15.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_15.html) : 복잡한 레이아웃 연습 1
+- [02_css_ex_16.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_16.html) : 복잡한 레이아웃 연습 2
+- [02_css_ex_17.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_17.html) : 복잡한 레이아웃 연습 3
+- [02_css_ex_18.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_18.html) : 복잡한 레이아웃 연습 4
+- [02_css_ex_19.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_19.html) : 복잡한 레이아웃 연습 5
+- [02_css_ex_20.html](https://github.com/ministori/tutorial/blob/master/02_css_ex_20.html) : 복잡한 레이아웃 연습 6
+
 
 3. 구현 기법 정리
 
