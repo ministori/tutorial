@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 변형</title>
+  <style>
+    /* transform은 원래 상태를 기준으로 상대적 변형 */
+
+    .box{
+      width:100px;
+      height:100px;
+    }
+
+    .box1{
+      background:deepskyblue;
+      transform:translate(30px,50px);
+    }
+
+    .box2{
+      background:darkgoldenrod;
+      transform:rotate(30deg);
+    }
+
+    .box3{
+      background:greenyellow;
+      transform:scale(-1, -1);
+    }
+
+    .box4{
+      background:palevioletred;
+      transform:skew(30deg, 20deg);
+    }
+  </style>
+</head>
+<body>
+
+<div class="box box1">박스1</div>
+
+<div class="box box2">박스2</div>
+
+<div class="box box3">박스3</div>
+
+<div class="box box4">박스4</div>
+
+</body>
+</html>
