@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>박스 CSS3</title>
+  <style>
+    .box{
+      width:300px;
+      height:100px;
+    }
+
+    .shadow{
+      box-shadow: 10px 10px 5px #333;
+    }
+
+    .border-image{
+      border: 10px solid transparent;
+      padding: 15px;
+      -webkit-border-image: url(images/border.png) 30 round; /* Safari 3.1-5 */
+      -o-border-image: url(images/border.png) 30 round; /* Opera 11-12.1 */
+      border-image: url(images/border.png) 30 round;
+    }
+
+    .border-image2{
+      border: 10px solid transparent;
+      padding: 15px;
+      -webkit-border-image: url(images/border.png) 30 stretch; /* Safari 3.1-5 */
+      -o-border-image: url(images/border.png) 30 stretch; /* Opera 11-12.1 */
+      border-image: url(images/border.png) 30 stretch;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box shadow">박스1</div>
+
+<div class="box border-image">박스2</div>
+
+<div class="box border-image2">박스3</div>
+
+</body>
+</html>

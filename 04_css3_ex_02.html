@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>배경 CSS3</title>
+  <style>
+    .box{
+      width:500px;
+      height:300px;
+    }
+
+    .bg1{
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9f29ce+0,6cff32+29,ff2828+69,26f2eb+89,7db9e8+100 */
+      background: rgb(159,41,206); /* Old browsers */
+      background: -moz-linear-gradient(left, rgba(159,41,206,1) 0%, rgba(108,255,50,1) 29%, rgba(255,40,40,1) 69%, rgba(38,242,235,1) 89%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, rgba(159,41,206,1) 0%,rgba(108,255,50,1) 29%,rgba(255,40,40,1) 69%,rgba(38,242,235,1) 89%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, rgba(159,41,206,1) 0%,rgba(108,255,50,1) 29%,rgba(255,40,40,1) 69%,rgba(38,242,235,1) 89%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f29ce', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */
+    }
+
+    .bg2{
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9f29ce+0,6cff32+29,ff2828+69,26f2eb+89,7db9e8+100 */
+      background: rgb(159,41,206); /* Old browsers */
+      background: -moz-radial-gradient(center, ellipse cover, rgba(159,41,206,1) 0%, rgba(108,255,50,1) 29%, rgba(255,40,40,1) 69%, rgba(38,242,235,1) 89%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
+      background: -webkit-radial-gradient(center, ellipse cover, rgba(159,41,206,1) 0%,rgba(108,255,50,1) 29%,rgba(255,40,40,1) 69%,rgba(38,242,235,1) 89%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: radial-gradient(ellipse at center, rgba(159,41,206,1) 0%,rgba(108,255,50,1) 29%,rgba(255,40,40,1) 69%,rgba(38,242,235,1) 89%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f29ce', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+
+    .bg3{
+      background:url(images/5-1.jpg);
+      background-size:contain;
+    }
+
+    .bg4{
+      background:url(images/5-1.jpg);
+      background-size:cover;
+    }
+
+    .bg5{
+      width:100%;
+      background:url(images/5-1.jpg) center;
+      background-size:cover;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box bg1">박스1</div>
+
+<div class="box bg2">박스2</div>
+
+<div class="box bg3">박스3</div>
+
+<div class="box bg4">박스4</div>
+
+<div class="box bg5">박스5</div>
+
+</body>
+</html>
