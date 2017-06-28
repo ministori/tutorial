@@ -16,6 +16,24 @@
         - 변환, 애니메이션 관련 CSS
         - flex : 레이아웃 CSS
 
+3. Selector( id, class )
+
+id attribute 는 서버개발(백엔드개발)과 연관되기 때문에
+가급적 사용하지 않는것이 좋음.
+
+id는 유일해야 함
+
+Ex)
+<p id="text"></p>
+<p id="text guide></p> => 오류
+
+class 이름은 하나의 태그에 여러개 사용할 수 있고, 같은 웹페이지에
+똑같은 이름을 여러번 사용할 수 있음
+
+Ex)
+<p class="text"></p> => text 이름 한개
+<p class="text description guide"></p> => text, description, guide 이름 세개
+
 
 ## 웹폰트
 
