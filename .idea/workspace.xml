@@ -24,58 +24,20 @@
     <favorites_list name="html_tut" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="05_js_ex_14.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/05_js_ex_14.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66233766">
-              <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="05_js_ex_13.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/05_js_ex_13.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="154" column="5" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
-              <folding>
-                <element signature="e#52#389#0" expanded="false" />
-                <element signature="e#560#778#0" expanded="false" />
-                <element signature="e#852#955#0" expanded="false" />
-                <element signature="e#998#1170#0" expanded="false" />
-                <element signature="e#1182#1874#0" expanded="false" />
-                <element signature="e#1197#1527#0" expanded="false" />
-                <element signature="e#1736#1871#0" expanded="false" />
-                <element signature="e#1955#2710#0" expanded="false" />
-                <element signature="e#2071#2109#0" expanded="false" />
-                <element signature="e#2133#2171#0" expanded="false" />
-                <element signature="e#2195#2233#0" expanded="false" />
-                <element signature="e#2256#2293#0" expanded="false" />
-                <element signature="e#2321#2406#0" expanded="false" />
-                <element signature="e#2442#2520#0" expanded="false" />
-                <element signature="e#2548#2642#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Html5" />
         <option value="JavaScript File" />
+        <option value="Html5" />
       </list>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/01_html_practice_03.html" />
         <option value="$PROJECT_DIR$/01_html_practice_01.html" />
         <option value="$PROJECT_DIR$/01_html_practice_02.html" />
         <option value="$PROJECT_DIR$/naming_exercise/reset.css" />
@@ -105,7 +67,6 @@
         <option value="$PROJECT_DIR$/04_css3_ex_07.html" />
         <option value="$PROJECT_DIR$/03_center_align.html" />
         <option value="$PROJECT_DIR$/02_css_ex_01.html" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/02_css_ex_09.html" />
         <option value="$PROJECT_DIR$/02_css_ex_13.html" />
         <option value="$PROJECT_DIR$/05_js_ex_01.js" />
@@ -126,6 +87,8 @@
         <option value="$PROJECT_DIR$/05_js_ex_12.js" />
         <option value="$PROJECT_DIR$/05_js_ex_13.js" />
         <option value="$PROJECT_DIR$/05_js_ex_14.js" />
+        <option value="$PROJECT_DIR$/05_js_ex_15.html" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -323,9 +286,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17170112" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17170112" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -362,13 +325,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/02_css_ex_05.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1222031">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/02_css_ex_06.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.19965577">
@@ -595,13 +551,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.464286">
-          <caret line="72" column="102" selection-start-line="72" selection-start-column="102" selection-end-line="72" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/02_css_ex_13.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40392706">
@@ -641,13 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.092016235">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="27" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05_js_ex_01.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.076923">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -708,8 +650,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/05_js_ex_13.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="154" column="5" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.41396105">
+          <caret line="142" column="5" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
           <folding>
             <element signature="e#52#389#0" expanded="false" />
             <element signature="e#560#778#0" expanded="false" />
@@ -718,7 +660,6 @@
             <element signature="e#1182#1874#0" expanded="false" />
             <element signature="e#1197#1527#0" expanded="false" />
             <element signature="e#1736#1871#0" expanded="false" />
-            <element signature="e#1955#2710#0" expanded="false" />
             <element signature="e#2071#2109#0" expanded="false" />
             <element signature="e#2133#2171#0" expanded="false" />
             <element signature="e#2195#2233#0" expanded="false" />
@@ -732,8 +673,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/05_js_ex_14.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66233766">
-          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.63474023">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05_js_ex_15.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7118644">
+          <caret line="44" column="39" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05_js_ex_01.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8508475">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8896104">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
           <folding />
         </state>
       </provider>

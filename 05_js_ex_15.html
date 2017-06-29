@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 제어</title>
+  <style>
+    .box1{
+      width:100px;
+      height:100px;
+      background:skyblue;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+
+  <div class="box1" id="box1">box1</div>
+
+  <p class="box2" id="box2">box2</p>
+
+  <!--
+    D.O.M : Document Object Model - 웹 문서를 객체의 형태로 표현하는 것 ( document 객체 )
+    B.O.M : Browser Object Model -  브라우저를 객체의 형태로 표현하는 것 ( window 객체 )
+  -->
+
+  <script>
+
+    // 객체 출력
+    console.dir( document );
+    console.log( window );
+
+    // DOM Node 접근
+    console.log( document.getElementById('box1') );
+    console.log( document.getElementsByClassName('box1') );
+    console.log( document.getElementsByTagName('div') );
+
+    // DOM 스타일 제어
+    document.getElementById('box1').style.background = 'red';
+    document.getElementsByClassName('box1')[0].style.color = 'white';
+    document.getElementsByTagName('div')[0].style.fontSize = '30px';
+
+    // jQuery DOM 스타일 제어
+    $('#box2').css('background', 'orange');
+    $('.box2').css({ color : 'white' });
+    $('p').css({'font-size' : '30px'});
+
+  </script>
+</body>
+</html>
