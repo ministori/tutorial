@@ -69,6 +69,26 @@
         $('.number-list').children().eq(i).append(i+1);
       }
 
+      // 4. 부모 노드 찾기
+      // 4-1. 직계 부모 찾기
+      console.log( $('.sub-contents').parent() );
+
+      $('.sub-contents').parent().css({
+        border : '1px solid #00f'
+      });
+
+      // 4-2. 조상 찾기
+      console.log( $('.sub-contents').parents() );
+
+      $('.sub-contents').parents('ul').css({
+        color : 'skyblue',
+        'font-size' : 13,
+        'font-style' : 'italic'
+      });
+
+      // 5. 형제 노드 찾기
+      console.log( $('.gnb-list').siblings('div') );
+
     });
 
   </script>
@@ -111,6 +131,22 @@
 
     ** eq()는 반복문과 같이 사용할 수 있음
 
+  4. 부모 노드 찾기
+
+    4-1. 직계 부모 찾기
+
+      - parent() 함수 사용
+
+    4-2. 조상 찾기
+
+      - parents() 함수 사용
+
+  5. 형제 노드 찾기
+
+    5-1. siblings() 함수 사용하기
+
+    5-2.
+
 </pre>
 
 <div class="box1">box1-1</div>
@@ -145,6 +181,18 @@
   <li>number</li>
   <li>number</li>
   <li>number</li>
+</ul>
+
+<ul>
+  <li>
+    <div>contents1</div>
+    <ul>
+      <li class="sub-contents">sub-contents1</li>
+      <li>sub-contents2</li>
+    </ul>
+  </li>
+  <li>contents2</li>
+  <li>contents3</li>
 </ul>
 
 </body>
