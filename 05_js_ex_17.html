@@ -87,7 +87,26 @@
       });
 
       // 5. 형제 노드 찾기
+      // 5-1. siblings() 함수 사용하기
       console.log( $('.gnb-list').siblings('div') );
+
+      $('.gnb-list').siblings('div').css({
+        'text-decoration' : 'underline'
+      });
+
+      // 5-2. prev() 함수 사용하기
+      console.log( $('.gnb-list').prev() );
+
+      $('.gnb-list').prev().css({
+        'font-style' : 'italic'
+      });
+
+      // 5-3. next() 함수 사용하기
+      console.log( $('.gnb-list').next() );
+
+      $('.gnb-list').next().css({
+        'font-style' : 'italic'
+      });
 
     });
 
@@ -145,7 +164,15 @@
 
     5-1. siblings() 함수 사용하기
 
-    5-2.
+      - 형제 노드 모두 찾는 함수
+
+    5-2. prev() 함수 사용하기
+
+      - 바로 옆에 이웃한 형제 중 앞 노드
+
+    5-3. next() 함수 사용하기
+
+      - 바로 옆에 이웃한 형제 중 뒷 노드
 
 </pre>
 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM 노드 다루기</title>
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <script>
+    $(function(){
+
+      // 1. 노드 추가
+      // 1-1. append
+      $('.box1').append('<div>append 추가 노드</div>');
+
+      // 1-2. appendTo
+      $('<div>appendTo 추가 노드</div>').appendTo('.box2');
+
+      // 1-3. prepend
+      $('.box1').prepend('<div>prepend 추가노드</div>');
+
+      // 1-4. prependTo
+      $('<div>prependTo 추가노드</div>').prependTo('.box2');
+
+    });
+  </script>
+</head>
+<body>
+
+<pre>
+
+  DOM 노드 다루기
+
+  1. 노드 추가, 생성
+
+    1-1 append() 함수
+
+      - 대상의 뒷쪽에 노드를 추가
+
+    1-2 appendTo() 함수
+
+      - 대상의 뒷쪽에 노드를 추가
+
+    1-3 prepend() 함수
+
+      - 대상의 앞쪽에 노드를 추가
+
+    1-4 prependTo() 함수
+
+      - 대상의 앞쪽에 노드를 추가
+
+</pre>
+
+<div class="box1">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut dolorem et illo incidunt ipsa, numquam odit officia, optio tempore velit vitae voluptates! Ducimus eum fugit labore odio porro quis!
+  </p>
+</div>
+
+<div class="box2">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut dolorem et illo incidunt ipsa, numquam odit officia, optio tempore velit vitae voluptates! Ducimus eum fugit labore odio porro quis!
+  </p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "tutorial",
+  "version": "1.0.0",
+  "description": "1. HTML(Hyper Text Markup Language)\r     - 웹 페이지의 논리 구조를 통해 콘텐츠를 표시하는 언어\r     - HTML5 추가된 요소 : header, footer, section, nav, article, aside",
+  "main": "05_js_ex_02.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ministori/tutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ministori/tutorial/issues"
+  },
+  "homepage": "https://github.com/ministori/tutorial#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
