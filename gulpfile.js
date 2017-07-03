@@ -1,11 +1,46 @@
 /**
- * Created by Administrator on 2017-06-30.
+ * Created by Administrator on 2017-07-03.
  */
 
-// gulp ì´ˆê¸°í™” : gulp module ë¶ˆëŸ¬ì˜´
+// º¯¼ö¼±¾ğ = require('¸ğµâÀÌ¸§');
 var gulp = require('gulp');
+var livereload = require('gulp-livereload');
+var include = require('gulp-include');
 
-// hello world ë¼ê³  ì½˜ì†”ì— ì°ëŠ” task
-gulp.task('hello', function () {
-  return console.log('Hello World!');
+/*
+
+gulp.task( taskÀÌ¸§, ÇÔ¼ö/ÀÍ¸íÇÔ¼ö );
+
+ */
+
+gulp.task('hello1', function () {
+  return console.log('Hello World1!');
 });
+
+gulp.task('hello2', function () {
+  return console.log('Hello World2!');
+});
+
+gulp.task('hello3', function () {
+  return console.log('Hello World3!');
+});
+
+// pipe()´Â ¸ğµâÀÇ ±â´ÉÀ» ½ÇÇàÇØÁÖ´Â ÇÔ¼ö
+
+// »õ·Î °íÄ§
+gulp.task('livereload', function(){
+  gulp.src(['html/*', 'css/*', 'js/*', '*'])
+      .pipe( livereload() );
+});
+
+// header, footer, °øÅë¿µ¿ª ºĞ¸®
+gulp.task('include', function(){
+  gulp.src("html_src/*.html")
+      .pipe(include())
+      .on('error', console.log)
+      .pipe(gulp.dest("html/"));
+});
+
+
+gulp.task('default', ['livereload', 'include']);
+

@@ -20,6 +20,18 @@
       // 1-4. prependTo
       $('<div>prependTo 추가노드</div>').prependTo('.box2');
 
+      // 2. 노드 삭제
+      $('.box3').children().remove();
+
+      // 3. 노드 수정/추가
+      // 3-1. html() 함수
+      $('.box4').html('<div>수정된 내용</div>');
+
+      // 3-2. text() 함수
+      $('.box5').text('<div>수정된 내용</div>');
+
+      $('.box6').html('<div>수정된 내용</div>');
+
     });
   </script>
 </head>
@@ -47,6 +59,16 @@
 
       - 대상의 앞쪽에 노드를 추가
 
+  2. 노드 삭제
+
+    - remove() 함수
+
+  3. 노드 내용 수정/추가
+
+    3-1. html() 함수
+
+    3-2. text() 함수
+
 </pre>
 
 <div class="box1">
@@ -60,6 +82,26 @@
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut dolorem et illo incidunt ipsa, numquam odit officia, optio tempore velit vitae voluptates! Ducimus eum fugit labore odio porro quis!
   </p>
 </div>
+
+<div class="box3">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut dolorem et illo incidunt ipsa, numquam odit officia, optio tempore velit vitae voluptates! Ducimus eum fugit labore odio porro quis!
+  </p>
+</div>
+
+<div class="box4">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut dolorem et illo incidunt ipsa, numquam odit officia, optio tempore velit vitae voluptates! Ducimus eum fugit labore odio porro quis!
+  </p>
+</div>
+
+<div class="box5">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut dolorem et illo incidunt ipsa, numquam odit officia, optio tempore velit vitae voluptates! Ducimus eum fugit labore odio porro quis!
+  </p>
+</div>
+
+<div class="box6"></div>
 
 </body>
 </html>
