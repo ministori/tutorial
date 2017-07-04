@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attribute(HTML 속성) 제어하기</title>
+  <style>
+    .box{
+      width:100px;
+      height:100px;
+      background:mediumvioletred;
+    }
+
+    .active{
+      width:300px;
+    }
+
+    .depth2{
+      display:none;
+    }
+
+    .depth2.active{
+      display:block;
+    }
+  </style>
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <script>
+
+    $(function(){
+
+      $('.box1').addClass('active');
+      $('.box2').removeClass('box');
+      var $menu = $('.depth1-link');
+      var $depth2 = $('.depth2');
+
+      $menu.on('mouseenter', function(){
+        $depth2.addClass('active');
+      });
+
+      $menu.on('mouseleave', function(){
+        $depth2.removeClass('active');
+      });
+
+    });
+
+  </script>
+</head>
+<body>
+
+<pre>
+
+  Attribute 제어하기
+
+  1. 클래스 추가/삭제
+
+    - 추가 : addClass() 함수
+
+    - 삭제 : removeClass() 함수
+
+
+</pre>
+
+<div class="box box1">box1</div>
+
+<div class="box box2">box2</div>
+
+<ul class="depth1">
+  <li class="depth1-item">
+    <a href="#" class="depth1-link">depth1</a>
+    <ul class="depth2">
+      <li class="depth2-item">
+        <a href="#" class="depth2-link">depth2</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</body>
+</html>

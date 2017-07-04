@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>스타일 제어</title>
+  <style>
+    .box1{
+      width:100px;
+      height:100px;
+      background:hotpink;
+      border:5px dashed blueviolet;
+    }
+  </style>
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <script>
+    // (function(){})(); => 즉시 실행 함수 : 패키징
+    // $(function(){}); => jQuery 진입점/시작점
+    $(function(){
+
+      // 박스의 현재 크기값에 가로 300, 세로 200 픽셀 만큼 더해서 크기 확대
+      var boxWidth;
+      var boxHeight;
+      var $box1 = $('.box1');
+
+      // parseInt : 숫자(정수) 데이터로 변환
+      boxWidth = parseInt( $box1.css('width') );
+      boxHeight = parseInt( $box1.css('height') );
+
+      boxWidth = boxWidth + 300;
+      boxHeight = boxHeight + 200;
+
+      $box1.css({
+        width : boxWidth,
+        height : boxHeight
+      });
+
+    });
+  </script>
+</head>
+<body>
+
+<pre>
+
+  스타일 제어
+
+  - css() 함수 사용
+
+    1. 스타일 제어 - CSS Property 설정
+
+    2. 적용되어 있는 스타일의 값을 읽는 기능
+
+</pre>
+
+<div class="box1">box1</div>
+
+</body>
+</html>
