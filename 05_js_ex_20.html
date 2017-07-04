@@ -27,6 +27,7 @@
 
     $(function(){
 
+      // 클래스 추가/삭제
       $('.box1').addClass('active');
       $('.box2').removeClass('box');
       var $menu = $('.depth1-link');
@@ -39,6 +40,14 @@
       $menu.on('mouseleave', function(){
         $depth2.removeClass('active');
       });
+
+      // HTML 속성 제어
+      var $image = $('.image');
+
+      $image.removeAttr('class');
+
+      $image.attr('src', 'images/5-2.jpg');
+      $image.attr('alt', '클림트의 그림');
 
     });
 
@@ -56,6 +65,13 @@
 
     - 삭제 : removeClass() 함수
 
+  2. HTML 속성 제어
+
+    - 추가/변경 : attr() 함수
+
+    - 삭제 : removeAttr() 함수
+
+    ** prop() : HTML 속성 중 정보가 아닌 상태를 다루는 속성을 제어할때 사용하는 함수
 
 </pre>
 
@@ -74,5 +90,27 @@
   </li>
 </ul>
 
+<div>
+  <img src="images/5-1.jpg" class="image" />
+</div>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
