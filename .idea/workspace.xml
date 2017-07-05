@@ -28,10 +28,13 @@
       <file leaf-file-name="05_js_ex_21.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/05_js_ex_21.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25932205">
-              <caret line="162" column="14" selection-start-line="162" selection-start-column="14" selection-end-line="162" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.6830509">
+              <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
               <folding>
                 <element signature="e#1413#2079#0" expanded="false" />
+                <element signature="e#2790#2989#0" expanded="false" />
+                <element signature="e#3041#3310#0" expanded="false" />
+                <element signature="e#3802#3814#0" expanded="false" />
                 <element signature="n#pre#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
@@ -636,16 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/05_js_ex_20.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6915254">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/05_js_ex_15.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42711863">
@@ -716,12 +709,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/05_js_ex_20.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6644068">
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+          <folding>
+            <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/05_js_ex_21.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25932205">
-          <caret line="162" column="14" selection-start-line="162" selection-start-column="14" selection-end-line="162" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.6830509">
+          <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
           <folding>
             <element signature="e#1413#2079#0" expanded="false" />
+            <element signature="e#2790#2989#0" expanded="false" />
+            <element signature="e#3041#3310#0" expanded="false" />
+            <element signature="e#3802#3814#0" expanded="false" />
             <element signature="n#pre#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>

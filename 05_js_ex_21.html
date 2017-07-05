@@ -148,7 +148,7 @@
 
           for(var i=0; i<this.$imageThumb.length; i++){
 
-            this.imageValue(this.$imageThumb);
+            this.imageValue(this.$imageThumb.eq(i));
 
             if( this.areaRatio > this.imageRatio ){
               this.$imageThumb.eq(i).addClass('full-width');
@@ -156,6 +156,10 @@
               this.$imageThumb.eq(i).addClass('full-height');
             }
           }
+        },
+        // 마우스 오버시 이미지 변경 함수
+        changeImage : function(){
+
         }
 
       };
@@ -164,6 +168,14 @@
       calculateRatio.applyBig();
 
       calculateRatio.applyThumb();
+
+      $('.image-bottom-wrap').on('mouseenter', function(){
+
+        var src = $(this).children().attr('src');
+
+        $('.image-big').attr('src', src);
+
+      });
 
     });
   </script>
