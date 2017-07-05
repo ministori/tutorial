@@ -42,7 +42,7 @@
     .image-big.full-height{
       height:100%;
     }
-    
+
     .image-bottom{
       width:215px;
       margin-top:4px;
@@ -64,6 +64,13 @@
       margin-right:0;
     }
 
+    .image-thumbnail.full-width{
+      width:100%;
+    }
+
+    .image-thumbnail.full-height{
+      height:100%;
+    }
 
   </style>
   <script src="lib/jquery-3.2.1.min.js"></script>
@@ -96,16 +103,21 @@
 
       });
 
-
-
       var imageRatio = {
 
-        areaWidth : parseInt( $('.image-top').css('width') ),
-        areaHeight : parseInt( $('.image-top').css('height')),
-        imageWidth : parseInt( $('.image-big').css('width') ),
-        imageHeight : parseInt( $('.image-big').css('height') ),
+        $imageTop : $('.image-top'),
+        $imageBig : $('.image-big'),
+        $imageThumb : $('.image-tumbnail'),
+        areaWidth : parseInt( this.$imageTop.css('width') ),
+        areaHeight : parseInt( this.$imageTop.css('height')),
+        imageWidth : 0,
+        imageHeight : 0,
         areaRatio : 0,
         imageRatio : 0,
+        imageValue : function( $image ){
+          this.imageWidth = parseInt( $image.css('width') );
+          this.imageHeight = parseInt( $image.css('height') );
+        },
         imageDivide : function(width, height){
           return width / height;
         }
@@ -113,14 +125,28 @@
       };
 
       imageRatio.areaRatio = imageRatio.imageDivide( imageRatio.areaWidth, imageRatio.areaHeight );
+      imageRatio.imageValue( imageRatio.$imageBig );
       imageRatio.imageRatio = imageRatio.imageDivide( imageRatio.imageWidth, imageRatio.imageHeight );
 
+      console.log(imageRatio.$imageBig);
+
       if( imageRatio.areaRatio > imageRatio.imageRatio ){
-        $('.image-big').addClass('full-width');
+        imageRatio.$imageBig.addClass('full-width');
       } else {
-        $('.image-big').addClass('full-height');
+        imageRatio.$imageBig.addClass('full-height');
       }
 
+      for(var i=0; i<$('.image-bottom-wrap').length; i++){
+
+        imageRatio.imageValue( imageRatio.$imageThumb );
+        imageRatio.imageRatio = imageRatio.imageDivide( imageRatio.imageWidth, imageRatio.imageHeight );
+
+        if( imageRatio.areaRatio > imageRatio.imageRatio ){
+          imageRatio.$imageThumb.eq(i).addClass('full-width');
+        } else {
+          imageRatio.$imageThumb.eq(i).addClass('full-height');
+        }
+      }
     });
   </script>
 </head>
