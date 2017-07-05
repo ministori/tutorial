@@ -28,6 +28,10 @@
       right:3px;
     }
 
+    .image-wrap{
+      width:215px;
+    }
+
     /* 큰 사진의 가로길이 : 215px */
     .image-top{
       width:215px;
@@ -136,9 +140,9 @@
           this.imageValue(this.$imageBig);
 
           if( this.areaRatio > this.imageRatio ){
-            this.$imageBig.addClass('full-width');
+            this.$imageBig.removeClass('full-height').addClass('full-width');
           } else {
-            this.$imageBig.addClass('full-height');
+            this.$imageBig.removeClass('full-width').addClass('full-height');
           }
         },
         // 작은 이미지에 적용
@@ -158,23 +162,26 @@
           }
         },
         // 마우스 오버시 이미지 변경 함수
-        changeImage : function(){
-
+        changeImage : function( $overImage ){
+          var src = $overImage.children().attr('src');
+          $('.image-big').attr('src', src);
         }
 
       };
 
       // 함수 실행
       calculateRatio.applyBig();
-
       calculateRatio.applyThumb();
 
+      // 이벤트 실행
       $('.image-bottom-wrap').on('mouseenter', function(){
+        calculateRatio.changeImage( $(this) );
+        calculateRatio.applyBig();
+      });
 
-        var src = $(this).children().attr('src');
-
-        $('.image-big').attr('src', src);
-
+      $('.image-wrap').on('mouseleave', function(){
+        calculateRatio.changeImage( $('.image-bottom-wrap').eq(0) );
+        calculateRatio.applyBig();
       });
 
     });
@@ -241,7 +248,7 @@
   </div>
   <div class="image-bottom">
     <div class="image-bottom-wrap"><img src="images/5-1.jpg" class="image-thumbnail" /></div>
-    <div class="image-bottom-wrap"><img src="images/5-2.jpg" class="image-thumbnail" /></div>
+    <div class="image-bottom-wrap"><img src="images/bg_image.jpg" class="image-thumbnail" /></div>
     <div class="image-bottom-wrap"><img src="images/6-1.jpg" class="image-thumbnail" /></div>
   </div>
 </div>
