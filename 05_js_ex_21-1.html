@@ -103,67 +103,50 @@
 
       });
 
-      var calculateRatio = {
-        // jQuery DOM 대상을 저장하는 프로퍼티
+      var imageRatio = {
+
         $imageTop : $('.image-top'),
         $imageBig : $('.image-big'),
         $imageThumb : $('.image-thumbnail'),
-        // 해당 부분의 값을 저장하는 객체 프로퍼티
-        areaWidth : 0,
-        areaHeight : 0,
+        areaWidth : parseInt( this.$imageTop.css('width') ),
+        areaHeight : parseInt( this.$imageTop.css('height')),
         imageWidth : 0,
         imageHeight : 0,
         areaRatio : 0,
         imageRatio : 0,
-        // 해당 부분의 값을 계산하는 메소드
-        // 마스크 영역 계산
-        areaValue : function(){
-          this.areaWidth = parseInt(this.$imageTop.css('width'));
-          this.areaHeight = parseInt(this.$imageTop.css('height'));
-          this.areaRatio = this.areaWidth / this.areaHeight;
-        },
-        // 이미지 계산
         imageValue : function( $image ){
           this.imageWidth = parseInt( $image.css('width') );
           this.imageHeight = parseInt( $image.css('height') );
-          this.imageRatio = this.imageWidth / this.imageHeight;
         },
-        // 큰 이미지에 적용
-        applyBig : function(){
-
-          this.areaValue();
-
-          this.imageValue(this.$imageBig);
-
-          if( this.areaRatio > this.imageRatio ){
-            this.$imageBig.addClass('full-width');
-          } else {
-            this.$imageBig.addClass('full-height');
-          }
-        },
-        // 작은 이미지에 적용
-        applyThumb : function(){
-
-          this.areaValue();
-
-          for(var i=0; i<$('.image-bottom-wrap').length; i++){
-
-            this.imageValue(this.$imageThumb);
-
-            if( this.areaRatio > this.imageRatio ){
-              this.$imageThumb.eq(i).addClass('full-width');
-            } else {
-              this.$imageThumb.eq(i).addClass('full-height');
-            }
-          }
+        imageDivide : function(width, height){
+          return width / height;
         }
 
       };
 
-      calculateRatio.applyBig();
+      console.log( imageRatio.$imageTop );
 
-      calculateRatio.applyThumb();
+      imageRatio.areaRatio = imageRatio.imageDivide( imageRatio.areaWidth, imageRatio.areaHeight );
+      imageRatio.imageValue( imageRatio.$imageBig );
+      imageRatio.imageRatio = imageRatio.imageDivide( imageRatio.imageWidth, imageRatio.imageHeight );
 
+      if( imageRatio.areaRatio > imageRatio.imageRatio ){
+        imageRatio.$imageBig.addClass('full-width');
+      } else {
+        imageRatio.$imageBig.addClass('full-height');
+      }
+
+      for(var i=0; i<$('.image-bottom-wrap').length; i++){
+
+        imageRatio.imageValue( imageRatio.$imageThumb );
+        imageRatio.imageRatio = imageRatio.imageDivide( imageRatio.imageWidth, imageRatio.imageHeight );
+
+        if( imageRatio.areaRatio > imageRatio.imageRatio ){
+          imageRatio.$imageThumb.eq(i).addClass('full-width');
+        } else {
+          imageRatio.$imageThumb.eq(i).addClass('full-height');
+        }
+      }
     });
   </script>
 </head>
