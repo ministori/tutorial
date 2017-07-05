@@ -27,6 +27,44 @@
       top:3px;
       right:3px;
     }
+
+    /* 큰 사진의 가로길이 : 215px */
+    .image-top{
+      width:215px;
+      height:215px;
+      overflow:hidden;
+    }
+
+    .image-big.full-width{
+      width:100%;
+    }
+
+    .image-big.full-height{
+      height:100%;
+    }
+    
+    .image-bottom{
+      width:215px;
+      margin-top:4px;
+    }
+    .image-bottom:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+    /* 작은 사진의 가로길이 : 69px , 사이여백 : 4px */
+    .image-bottom-wrap{
+      width:69px;
+      height:69px;
+      margin-right:4px;
+      float:left;
+      overflow:hidden;
+    }
+    .image-bottom-wrap:last-child{
+      margin-right:0;
+    }
+
+
   </style>
   <script src="lib/jquery-3.2.1.min.js"></script>
   <script>
@@ -54,10 +92,34 @@
         layerPop += '  </div>';
         layerPop += '</div>';
 
-
         $('body').append( layerPop );
 
       });
+
+
+
+      var imageRatio = {
+
+        areaWidth : parseInt( $('.image-top').css('width') ),
+        areaHeight : parseInt( $('.image-top').css('height')),
+        imageWidth : parseInt( $('.image-big').css('width') ),
+        imageHeight : parseInt( $('.image-big').css('height') ),
+        areaRatio : 0,
+        imageRatio : 0,
+        imageDivide : function(width, height){
+          return width / height;
+        }
+
+      };
+
+      imageRatio.areaRatio = imageRatio.imageDivide( imageRatio.areaWidth, imageRatio.areaHeight );
+      imageRatio.imageRatio = imageRatio.imageDivide( imageRatio.imageWidth, imageRatio.imageHeight );
+
+      if( imageRatio.areaRatio > imageRatio.imageRatio ){
+        $('.image-big').addClass('full-width');
+      } else {
+        $('.image-big').addClass('full-height');
+      }
 
     });
   </script>
@@ -115,6 +177,17 @@
 
 <div>
   <a href="http://www.naver.com" class="anchor">네이버 링크</a>
+</div>
+
+<div class="image-wrap">
+  <div class="image-top">
+    <img src="images/5-1.jpg" class="image-big" />
+  </div>
+  <div class="image-bottom">
+    <div class="image-bottom-wrap"><img src="images/5-1.jpg" class="image-thumbnail" /></div>
+    <div class="image-bottom-wrap"><img src="images/5-2.jpg" class="image-thumbnail" /></div>
+    <div class="image-bottom-wrap"><img src="images/6-1.jpg" class="image-thumbnail" /></div>
+  </div>
 </div>
 
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
