@@ -28,26 +28,29 @@
       <file leaf-file-name="05_js_ex_21.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/05_js_ex_21.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5101695">
-              <caret line="310" column="52" selection-start-line="310" selection-start-column="52" selection-end-line="310" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.7355932">
+              <caret line="376" column="0" selection-start-line="376" selection-start-column="0" selection-end-line="376" selection-end-column="0" />
               <folding>
-                <element signature="e#2283#2949#0" expanded="false" />
-                <element signature="e#3055#4931#0" expanded="false" />
-                <element signature="e#5359#5423#0" expanded="false" />
-                <element signature="e#5451#5632#0" expanded="false" />
-                <element signature="e#5642#5707#0" expanded="false" />
-                <element signature="e#5867#5925#0" expanded="false" />
-                <element signature="e#5973#6113#0" expanded="false" />
-                <element signature="e#6123#6177#0" expanded="false" />
-                <element signature="e#6229#6393#0" expanded="false" />
-                <element signature="e#6403#6468#0" expanded="false" />
-                <element signature="n#pre#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#2381#8178#0" expanded="false" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#pre#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#6;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loading.gif" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/loading.gif">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -241,10 +244,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\moon\front_end\tutorial\images" />
       <recent name="D:\moon\front_end\tutorial" />
       <recent name="D:\moon\front_end\tutorial\lib" />
       <recent name="D:\moon\front_end\tutorial\fonts" />
-      <recent name="D:\moon\front_end\tutorial\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\moon\front_end\tutorial\images" />
@@ -378,18 +381,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/02_css_ex_20.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40963855">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/border.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/04_css3_ex_01.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6423562">
@@ -719,26 +710,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/seablue.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/loading.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/05_js_ex_21.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5101695">
-          <caret line="310" column="52" selection-start-line="310" selection-start-column="52" selection-end-line="310" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.7355932">
+          <caret line="376" column="0" selection-start-line="376" selection-start-column="0" selection-end-line="376" selection-end-column="0" />
           <folding>
-            <element signature="e#2283#2949#0" expanded="false" />
-            <element signature="e#3055#4931#0" expanded="false" />
-            <element signature="e#5359#5423#0" expanded="false" />
-            <element signature="e#5451#5632#0" expanded="false" />
-            <element signature="e#5642#5707#0" expanded="false" />
-            <element signature="e#5867#5925#0" expanded="false" />
-            <element signature="e#5973#6113#0" expanded="false" />
-            <element signature="e#6123#6177#0" expanded="false" />
-            <element signature="e#6229#6393#0" expanded="false" />
-            <element signature="e#6403#6468#0" expanded="false" />
-            <element signature="n#pre#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#2381#8178#0" expanded="false" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#pre#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#6;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

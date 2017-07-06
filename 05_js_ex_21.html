@@ -119,9 +119,27 @@
       background:orangered
     }
 
+    .high-image{
+      width:100%;
+    }
+
+    .wrap{
+      display:none;
+    }
+
+    .loading{
+      width:128px;
+      height:62px;
+      position:absolute;
+      top:50%;
+      left:50%;
+      margin:-31px 0 0 -64px;
+    }
+
   </style>
   <script src="lib/jquery-3.2.1.min.js"></script>
   <script>
+
     $(function(){
 
       var layerPop = '';
@@ -305,25 +323,69 @@
        * 스크롤될 때 정해진 영역으로 스크롤되어 넘어가면 해당 탭이 활성화 되는 예제
        * */
 
+      // offset() : HTML 요소의 위치(top, left)값을 반환
+      var offsetTop = $('.fixed-tab').offset().top;
+      var offsetTopReview = $('.tab-content.review').offset().top;
+      var offsetTopChange = $('.tab-content.change').offset().top;
+
       $(window).on('scroll', function(){
 
+        // scrollTop() : 현재 세로 스크롤 위치 값을 반환
+        // scrollLeft() : 현재 가로 스크롤 위치 값을 반환
         var scrollValue = $(window).scrollTop();
-        var offsetTop = $('.fixed-tab').offset().top;
 
-        console.log( offsetTop );
-
-        if( scrollValue >= 1500 ){
-          $('.fixed-tab-item').addClass('active');
+        if( scrollValue < offsetTop ) {
+          $('.fixed-tab').removeClass('fixed');
+          $('.fixed-tab-item').removeClass('active');
+        }
+        if( scrollValue >= offsetTop ) {
+          $('.fixed-tab').addClass('fixed');
+          $('.fixed-tab-item').removeClass('active');
+          $('.fixed-tab-item').eq(0).addClass('active');
+        }
+        if( scrollValue >= offsetTopReview ) {
+          $('.fixed-tab-item').removeClass('active');
+          $('.fixed-tab-item').eq(1).addClass('active');
+        }
+        if( scrollValue >= offsetTopChange ) {
+          $('.fixed-tab-item').removeClass('active');
+          $('.fixed-tab-item').eq(2).addClass('active');
         }
 
       });
 
     });
+
+    /**
+     * 페이지의 모든 콘텐츠가 로딩된 이후에 로딩바는 사라지고
+     * 콘텐츠는 나타나는 예제
+     *
+     * 페이지의 모든 콘텐츠가 로딩된 이후에 작업하기 위한 이벤트는
+     * window 객체를 대상으로 함
+     *
+     * jQuery 진입점에 포함시키지 않음
+     * */
+
+    $(window).on('load', function(){
+
+      // hide() : 화면에 보이는 요소를 보이지 않게 해주는 함수
+      $('.loading').hide();
+      // show() : 화면에 보이지 않는 요소를 보이게 해주는 함수
+      $('.wrap').show();
+
+    });
+
   </script>
 </head>
 <body>
 
-<pre>
+<div class="loading">
+  <img src="images/loading.gif" />
+</div>
+
+<div class="wrap">
+
+  <pre>
 
   이벤트
 
@@ -380,89 +442,93 @@
 
 </pre>
 
-<div>
-  <a href="http://www.naver.com" class="anchor">네이버 링크</a>
-</div>
-
-<div class="image-wrap">
-  <div class="image-top">
-    <img src="images/5-1.jpg" class="image-big" />
+  <div>
+    <a href="http://www.naver.com" class="anchor">네이버 링크</a>
   </div>
-  <div class="image-bottom">
-    <div class="image-bottom-wrap"><img src="images/5-1.jpg" class="image-thumbnail" /></div>
-    <div class="image-bottom-wrap"><img src="images/bg_image.jpg" class="image-thumbnail" /></div>
-    <div class="image-bottom-wrap"><img src="images/6-1.jpg" class="image-thumbnail" /></div>
+
+  <div class="image-wrap">
+    <div class="image-top">
+      <img src="images/5-1.jpg" class="image-big" />
+    </div>
+    <div class="image-bottom">
+      <div class="image-bottom-wrap"><img src="images/5-1.jpg" class="image-thumbnail" /></div>
+      <div class="image-bottom-wrap"><img src="images/bg_image.jpg" class="image-thumbnail" /></div>
+      <div class="image-bottom-wrap"><img src="images/6-1.jpg" class="image-thumbnail" /></div>
+    </div>
   </div>
-</div>
 
-<br /><br /><br />
+  <br /><br /><br />
 
-<div>
-  <input type="text" class="input-text" />
-</div>
+  <div>
+    <input type="text" class="input-text" />
+  </div>
 
-<br /><br /><br />
+  <br /><br /><br />
 
-<div>
-  <select class="select-box">
-    <option>=====지역 선택=====</option>
-    <option>서울</option>
-    <option>경기</option>
-    <option>충청</option>
-  </select>
-  <div class="select text-display"></div>
-</div>
+  <div>
+    <select class="select-box">
+      <option>=====지역 선택=====</option>
+      <option>서울</option>
+      <option>경기</option>
+      <option>충청</option>
+    </select>
+    <div class="select text-display"></div>
+  </div>
 
-<br /><br /><br />
+  <br /><br /><br />
 
-<div>
-  <input type="text" class="button-text" />
-  <button type="button" class="button-send">전송</button>
-  <div class="button text-display"></div>
-</div>
+  <div>
+    <input type="text" class="button-text" />
+    <button type="button" class="button-send">전송</button>
+    <div class="button text-display"></div>
+  </div>
 
-<br /><br /><br />
+  <br /><br /><br />
 
-<div>
-  <input type="text" class="change-text" />
-  <div class="change text-display"></div>
-</div>
+  <div>
+    <input type="text" class="change-text" />
+    <div class="change text-display"></div>
+  </div>
 
-<br /><br /><br />
+  <br /><br /><br />
 
-<div>
-  <div class="window-size"></div>
-</div>
+  <div>
+    <div class="window-size"></div>
+  </div>
 
-<ul class="fixed-tab">
-  <li class="fixed-tab-item">상품정보</li>
-  <li class="fixed-tab-item">상품리뷰</li>
-  <li class="fixed-tab-item">상품교환</li>
-</ul>
+  <ul class="fixed-tab">
+    <li class="fixed-tab-item">상품정보</li>
+    <li class="fixed-tab-item">상품리뷰</li>
+    <li class="fixed-tab-item">상품교환</li>
+  </ul>
 
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
+  <div class="tab-content review">상품리뷰</div>
 
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
+  <div class="tab-content change">상품교환</div>
 
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
+  <div>
+    <img src="images/sea.jpg" class="high-image" />
+  </div>
 
+  <div>
+    <a href="#" class="anchor">메세지 출력</a>
+  </div>
 
-
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-
-<div>
-  <a href="#" class="anchor">메세지 출력</a>
 </div>
 
 </body>
