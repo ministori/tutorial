@@ -91,6 +91,34 @@
       display:inline-block;
     }
 
+    .fixed-tab{
+      width:100%;
+      border-top:3px solid red;
+      border-bottom:3px solid red;
+      background:#fff;
+      margin:0;
+    }
+    .fixed-tab.fixed{
+      position:fixed;
+      top:0;
+      left:0;
+    }
+    .fixed-tab:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+    .fixed-tab-item{
+      list-style-type: none;
+      float:left;
+      margin-right:30px;
+      padding:20px 0;
+    }
+    .fixed-tab-item.active{
+      color:#fff;
+      background:orangered
+    }
+
   </style>
   <script src="lib/jquery-3.2.1.min.js"></script>
   <script>
@@ -234,7 +262,6 @@
 
       });
 
-
       /**
        * 인풋 박스에 텍스트 입력후 전송 버튼 클릭시 내용 표시 예제
        * */
@@ -253,12 +280,41 @@
 
       $('.change-text').on('keypress', function(e){
 
-        console.log(e.which);
-        $('.change.text-display').text(e.which);
+        var textValue = $(this).val() + String.fromCharCode(e.which); // 아스키(ASCII) 코드 값을 문자로 변환하는 함수
+        $('.change.text-display').text(textValue);
 
+      });
 
-//        var textValue = $(this).val();
-//        $('.change.text-display').text(textValue);
+      /**
+       * 브라우저의 크기를 변경할 때 브라우저의 가로길이/세로길이를 출력하는 예제
+       * */
+
+      $(window).on('resize', function(){
+
+        // 가로길이 값을 읽는 함수 : width()
+        // 세로길이 값을 읽는 함수 : height()
+        // 길이의 숫자값만 읽음
+
+        var sizeValue = '가로 :' + $(window).width() + ' 세로 : ' + $(window).height();
+
+        $('.window-size').text( sizeValue );
+
+      });
+
+      /**
+       * 스크롤될 때 정해진 영역으로 스크롤되어 넘어가면 해당 탭이 활성화 되는 예제
+       * */
+
+      $(window).on('scroll', function(){
+
+        var scrollValue = $(window).scrollTop();
+        var offsetTop = $('.fixed-tab').offset().top;
+
+        console.log( offsetTop );
+
+        if( scrollValue >= 1500 ){
+          $('.fixed-tab-item').addClass('active');
+        }
 
       });
 
@@ -372,6 +428,37 @@
   <div class="change text-display"></div>
 </div>
 
+<br /><br /><br />
+
+<div>
+  <div class="window-size"></div>
+</div>
+
+<ul class="fixed-tab">
+  <li class="fixed-tab-item">상품정보</li>
+  <li class="fixed-tab-item">상품리뷰</li>
+  <li class="fixed-tab-item">상품교환</li>
+</ul>
+
+
+
+
+
+
+
+
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
 <div>

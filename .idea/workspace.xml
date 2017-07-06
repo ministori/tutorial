@@ -28,16 +28,19 @@
       <file leaf-file-name="05_js_ex_21.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/05_js_ex_21.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50338984">
-              <caret line="256" column="46" selection-start-line="256" selection-start-column="46" selection-end-line="256" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.5101695">
+              <caret line="310" column="52" selection-start-line="310" selection-start-column="52" selection-end-line="310" selection-end-column="52" />
               <folding>
-                <element signature="e#1774#2440#0" expanded="false" />
-                <element signature="e#2546#4422#0" expanded="false" />
-                <element signature="e#4850#4914#0" expanded="false" />
-                <element signature="e#4942#5123#0" expanded="false" />
-                <element signature="e#5246#5348#0" expanded="false" />
-                <element signature="e#5465#5605#0" expanded="false" />
-                <element signature="e#5615#5669#0" expanded="false" />
+                <element signature="e#2283#2949#0" expanded="false" />
+                <element signature="e#3055#4931#0" expanded="false" />
+                <element signature="e#5359#5423#0" expanded="false" />
+                <element signature="e#5451#5632#0" expanded="false" />
+                <element signature="e#5642#5707#0" expanded="false" />
+                <element signature="e#5867#5925#0" expanded="false" />
+                <element signature="e#5973#6113#0" expanded="false" />
+                <element signature="e#6123#6177#0" expanded="false" />
+                <element signature="e#6229#6393#0" expanded="false" />
+                <element signature="e#6403#6468#0" expanded="false" />
                 <element signature="n#pre#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -718,16 +721,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/05_js_ex_21.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50338984">
-          <caret line="256" column="46" selection-start-line="256" selection-start-column="46" selection-end-line="256" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.5101695">
+          <caret line="310" column="52" selection-start-line="310" selection-start-column="52" selection-end-line="310" selection-end-column="52" />
           <folding>
-            <element signature="e#1774#2440#0" expanded="false" />
-            <element signature="e#2546#4422#0" expanded="false" />
-            <element signature="e#4850#4914#0" expanded="false" />
-            <element signature="e#4942#5123#0" expanded="false" />
-            <element signature="e#5246#5348#0" expanded="false" />
-            <element signature="e#5465#5605#0" expanded="false" />
-            <element signature="e#5615#5669#0" expanded="false" />
+            <element signature="e#2283#2949#0" expanded="false" />
+            <element signature="e#3055#4931#0" expanded="false" />
+            <element signature="e#5359#5423#0" expanded="false" />
+            <element signature="e#5451#5632#0" expanded="false" />
+            <element signature="e#5642#5707#0" expanded="false" />
+            <element signature="e#5867#5925#0" expanded="false" />
+            <element signature="e#5973#6113#0" expanded="false" />
+            <element signature="e#6123#6177#0" expanded="false" />
+            <element signature="e#6229#6393#0" expanded="false" />
+            <element signature="e#6403#6468#0" expanded="false" />
             <element signature="n#pre#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
