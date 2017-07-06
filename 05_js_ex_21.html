@@ -76,12 +76,31 @@
       height:100%;
     }
 
+    .input-text{
+      background:url(images/place_holder.png) no-repeat;
+    }
+
+    .input-text.focus-in{
+      background:none;
+    }
+
+    .text-display{
+      padding:30px;
+      border:5px solid red;
+      font-size:30px;
+      display:inline-block;
+    }
+
   </style>
   <script src="lib/jquery-3.2.1.min.js"></script>
   <script>
     $(function(){
 
       var layerPop = '';
+
+      /**
+       * 마우스를 클릭했을 때 팝업창을 띄워주는 예제
+       * */
 
       $('.anchor').on('click', function(e){
         // 이벤트를 제어하자 => event 객체를 사용해서 기능
@@ -107,6 +126,9 @@
 
       });
 
+      /**
+       * 이미지 마스킹 영역과 이미지의 비율을 비교해서 가로/세로 길이 지정해주는 예제
+       * */
       var calculateRatio = {
         // jQuery DOM 대상을 저장하는 프로퍼티
         $imageTop : $('.image-top'),
@@ -184,6 +206,60 @@
         calculateRatio.applyBig();
       });
 
+      /**
+       * 인풋 박스에 포커스 이동시 안내 문구의 화면 표시 여부를 지정하는 예제
+       * */
+
+      $('.input-text').on({
+
+        'focusin' : function(){
+          $(this).addClass('focus-in');
+        },
+
+        'focusout' : function(){
+          $(this).removeClass('focus-in');
+        }
+
+      });
+
+      /**
+       * 셀렉트 박스의 목록중 하나를 선택했을 때 선택한 내용을 화면에 표시 예제
+       * */
+
+      $('.select-box').on('change', function(){
+
+        var textValue = $(this).val();
+
+        $('.select.text-display').text(textValue);
+
+      });
+
+
+      /**
+       * 인풋 박스에 텍스트 입력후 전송 버튼 클릭시 내용 표시 예제
+       * */
+
+      $('.button-send').on('click', function(){
+
+        var textValue = $('.button-text').val(); // val() : 인풋박스의 값을 읽어오는 함수
+
+        $('.button.text-display').text(textValue);
+
+      });
+
+      /**
+       * 인풋 박스에 텍스트를 입력할 때 마다 내용 표시 예제
+       * */
+
+      $('.change-text').on('keypress', function(e){
+
+        console.log(e.which);
+
+//        var textValue = $(this).val();
+//        $('.change.text-display').text(textValue);
+
+      });
+
     });
   </script>
 </head>
@@ -219,6 +295,14 @@
 
     - focusin / focusout : 포커스를 얻었을 때 / 잃었을 때
 
+      ** 키보드의 TAB 키를 사용해서 순차적으로 포커스를 이동시킬 수 있음
+
+      ** 포커스가 이동될 때, 기존에 포커스가 있던 요소는 포커스를 잃게되고, 다음 요소는 포커스를 얻게되는 이벤트가 동시에 발생
+
+    - change : 셀렉트 박스의 목록을 선택했을 때
+
+    - keypress : 키보드로 입력했을 때
+
     - keydown / keyup : 키보드 눌렀을 때 / 떼었을 때
 
     - mousedown / mouseup : 마우스 버튼 눌렀을 때 / 떼었을 때
@@ -251,6 +335,39 @@
     <div class="image-bottom-wrap"><img src="images/bg_image.jpg" class="image-thumbnail" /></div>
     <div class="image-bottom-wrap"><img src="images/6-1.jpg" class="image-thumbnail" /></div>
   </div>
+</div>
+
+<br /><br /><br />
+
+<div>
+  <input type="text" class="input-text" />
+</div>
+
+<br /><br /><br />
+
+<div>
+  <select class="select-box">
+    <option>=====지역 선택=====</option>
+    <option>서울</option>
+    <option>경기</option>
+    <option>충청</option>
+  </select>
+  <div class="select text-display"></div>
+</div>
+
+<br /><br /><br />
+
+<div>
+  <input type="text" class="button-text" />
+  <button type="button" class="button-send">전송</button>
+  <div class="button text-display"></div>
+</div>
+
+<br /><br /><br />
+
+<div>
+  <input type="text" class="change-text" />
+  <div class="change text-display"></div>
 </div>
 
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
