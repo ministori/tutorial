@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>animate 함수</title>
+  <style>
+    .box{
+      width:100px;
+      height:100px;
+      background:palegoldenrod;
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4{
+      position:relative;
+      top:0;
+      left:0;
+    }
+
+    /* 이미지 슬라이딩 */
+    .rolling{
+      width:400px;
+      position:relative;
+      left:50%;
+      margin-left:-200px;
+    }
+
+    .view{
+      width:400px;
+      height:300px;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .view-image{
+      display:block;
+      position:absolute;
+      top:0;
+      left:0;
+    }
+
+    .arrow-wrap{
+      width:100%;
+      position:absolute;
+      top:50%;
+      margin-top:-15px;
+      left:0;
+    }
+
+    .arrow{
+      display:block;
+      width:30px;
+      height:30px;
+      border:0;
+      background:url(images/arrow_sprite.png) no-repeat;
+      text-indent:-99999em;
+      cursor:pointer;
+      position:absolute;
+      top:0;
+      left:0;
+    }
+
+    .arrow.right{
+      background-position:-31px 0;
+      left:auto;
+      right:0;
+    }
+
+  </style>
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <script>
+    $(function(){
+
+      // css() 함수를 사용했을 때 => 점프 이동
+      $('.btn-jump-right').on('click', function(){
+        $('.box1').css({
+          left : 300
+        });
+      });
+
+      // animate() 함수를 사용했을 때 => 애니메이션 이동
+      $('.btn-move-right').on('click', function(){
+        // $().animate( CSS Property, 애니메이션 시간, 콜백함수);
+        $('.box2').animate({
+          left : 300
+        }, 1000);
+      });
+
+      // CSS 속성을 한번에 적용해서 애니메이션
+      $('.btn-start-all').on('click', function(){
+
+        $('.box3').animate({
+          width : 300,
+          height: 300,
+          left : 300
+        });
+
+      });
+
+      // CSS 속성을 차례대로 애니메이션 - 메소드 체이닝 방법
+      $('.btn-start-part').on('click', function(){
+        $('.box4')
+            .animate({width :300}, 1000)
+            .animate({height:300}, 1000)
+            .animate({left : 300}, 1000);
+      });
+
+      // CSS 속성을 차례대로 애니메이션 - 콜백함수 방법
+      $('.btn-start-part2').on('click', function(){
+        $('.box4').animate({width:100}, 1000, function(){
+          $(this).animate({height:100}, 1000, function(){
+            $(this).animate({left:0}, 1000);
+          });
+        });
+      });
+    });
+
+    // jquery 진입점은 여러번 사용할 수 있음
+    $(function(){
+
+      /**
+       * 함수 기능
+       *
+       * 1. 초기화 - init()
+       *
+       * */
+
+      // 선언부
+      function init(){
+        $('.view-image').eq(0).css({left : 0});
+        $('.view-image').eq(1).css({left : 400});
+        $('.view-image').eq(2).css({left : -400});
+      }
+
+      // 실행부
+      init();
+
+    });
+  </script>
+</head>
+<body>
+
+<div>
+  <button type="button" class="btn-jump-right">Jump Right</button>
+  <div class="box box1">box1</div>
+</div>
+
+<div>
+  <button type="button" class="btn-move-right">Move Right</button>
+  <div class="box box2">box2</div>
+</div>
+
+<div>
+  <button type="button" class="btn-start-all">한번에 적용</button>
+  <div class="box box3">box3</div>
+</div>
+
+<div>
+  <button type="button" class="btn-start-part">차례대로 적용</button>
+  <button type="button" class="btn-start-part2">차례대로 적용</button>
+  <div class="box box4">box4</div>
+</div>
+
+<h1>이미지 슬라이딩/롤링</h1>
+
+<div class="rolling">
+
+  <div class="view">
+
+    <img src="images/roll_01.jpg" class="view-image" />
+    <img src="images/roll_02.jpg" class="view-image" />
+    <img src="images/roll_03.jpg" class="view-image" />
+
+  </div>
+
+  <div class="arrow-wrap">
+
+    <button type="button" class="arrow left">left</button>
+    <button type="button" class="arrow right">right</button>
+
+  </div>
+
+</div>
+
+</body>
+</html>

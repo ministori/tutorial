@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>애니메이션</title>
+  <style>
+    .box{
+      width:200px;
+      height:200px;
+      background:yellowgreen;
+    }
+
+    .fade-in{
+      display:none;
+    }
+
+    .slide{
+      display:none;
+    }
+
+    .show{
+      display:none;
+    }
+  </style>
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <script>
+    $(function(){
+      // stop() 함수 : 진행 중인 애니메이션을 취소하는 함수
+
+      // fadeIn() 함수
+      $('.btn-fade-in').on('click', function(){
+
+        // $().fadeIn( 애니메이션 시간, 콜백함수 );
+        // 애니메이션 시간 : 단위 ms : 1000ms => 1초
+        // 콜백함수 : 함수의 동작이 끝나고 실행될 기능
+
+        $('.fade-in').stop().fadeIn(1000, function(){
+          $('.fade-out-msg').remove();
+          $('.fade-in-wrap').append('<div class="fade-in-msg">Fade In Complete</div>');
+        });
+      });
+
+      // fadeOut() 함수
+      $('.btn-fade-out').on('click', function(){
+        $('.fade-in').stop().fadeOut(1000, function(){
+          $('.fade-in-msg').remove();
+          $('.fade-in-wrap').append('<div class="fade-out-msg">Fade Out Complete</div>');
+        });
+      });
+
+      // slideDown() 함수
+      $('.btn-slide-down').on('mouseenter', function(){
+        $('.slide').stop().slideDown(1000, function(){
+          $('.slide-up-msg').remove();
+          $('.slide-wrap').append('<div class="slide-down-msg">Slide Down Complete</div>');
+        });
+      });
+
+      // slideUp() 함수
+      $('.btn-slide-up').on('mouseenter', function(){
+        $('.slide').stop().slideUp(1000, function(){
+          $('.slide-down-msg').remove();
+          $('.slide-wrap').append('<div class="slide-up-msg">Slide Up Complete</div>');
+        });
+      });
+
+      // show() 함수
+      $('.btn-show').on('click', function(){
+        $('.show').stop().show(1000, function(){
+          $('.hide-msg').remove();
+          $('.show-wrap').append('<div class="show-msg">Show Complete</div>');
+        });
+      });
+
+      // hide() 함수
+      $('.btn-hide').on('click', function(){
+        $('.show').stop().hide(1000, function(){
+          $('.show-msg').remove();
+          $('.show-wrap').append('<div class="hide-msg">Hide Complete</div>');
+        });
+      });
+
+    });
+  </script>
+</head>
+<body>
+
+<div class="fade-in-wrap">
+  <button type="button" class="btn-fade-in">Fade In</button>
+  <button type="button" class="btn-fade-out">Fade Out</button>
+  <div class="box">
+    <div class="fade-in">box1</div>
+  </div>
+  <div>==========================</div>
+</div>
+
+<div class="slide-wrap">
+  <button type="button" class="btn-slide-down">Slide Down</button>
+  <button type="button" class="btn-slide-up">Slide Up</button>
+  <div class="box slide">
+    box1
+  </div>
+  <div>==========================</div>
+</div>
+
+<div class="show-wrap">
+  <button type="button" class="btn-show">Show</button>
+  <button type="button" class="btn-hide">Hide</button>
+  <div class="box show">
+    box1
+  </div>
+  <div>==========================</div>
+</div>
+
+</body>
+</html>
