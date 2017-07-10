@@ -139,6 +139,7 @@
       var nextIndex = 0;
       // moveLeft() 실행 전 => nextIndex = 1
       // moveRight() 실행 전=> nextIndex = 2(-1)
+      var timeID;
 
       function moveLeft(){
         // 마지막 이미지의 인덱스 이면 처음 인덱스 번호로 되돌려 줌.
@@ -147,6 +148,7 @@
         }
         // 마스킹 영역에서 현재 보이는 이미지를 영역 밖으로 슬라이딩
         $('.view-image').eq(currentIndex).stop().animate({left:-400}, 1000);
+
         // 다음 보일 이미지를 자리배치 한 이후, 영역 안으로 슬라이딩
         $('.view-image').eq(nextIndex).css({left:400}).stop().animate({left:0}, 1000);
 
@@ -174,17 +176,38 @@
         nextIndex--;
       }
 
+      function autoRolling(){
+        // 자동 롤링
+        // setInterval(함수, 시간) 함수 : javascript 기본 함수 - 지정된 시간마다 함수 반복 실행
+        // 시간 : animate 함수의 시간보다 커야 함
+        timeID = setInterval(function(){
+          nextIndex = currentIndex + 1;
+          moveLeft();
+        }, 1000);
+      }
+
       // 실행부
       init();
 
+      autoRolling();
+
       $('.arrow.right').on('click', function(){
+        // clearInterval() : setInterval() 함수 진행을 취소하는 함수
+        clearInterval( timeID );
         nextIndex = currentIndex + 1;
-        moveLeft();
+        // 애니메이션이 진행되지 않을 때 함수 실행
+        if( !$('.view-image').is(':animated') ){
+          moveLeft();
+        }
       });
 
       $('.arrow.left').on('click', function(){
+        clearInterval( timeID );
         nextIndex = currentIndex - 1;
-        moveRight();
+        // 애니메이션이 진행되지 않을 때 함수 실행
+        if( !$('.view-image').is(':animated') ){
+          moveRight();
+        }
       });
 
     });
