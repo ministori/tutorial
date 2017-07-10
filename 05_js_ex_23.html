@@ -154,7 +154,7 @@
        * 5. 화살표 클릭시 자동롤링 취소 기능, 이후 5초가 지나면 자동롤링 재시작
        * 6. Play, Pause 버튼 기능 - 동적으로 추가된 클래스 인식하는 방법
        * 7. 이미지 개수만큼 페이징 표시 추가하기 - paging()
-       * 8. 페이징 번호 클릭시 해당 이미지가 화면으로 슬라이딩 되게하는 함수
+       * 8. 페이징 번호 클릭시 해당 이미지가 화면으로 슬라이딩 되게하는 함수 - clickPaging()
        *
        * */
 
@@ -242,6 +242,12 @@
 
       }
 
+      function clickPaging(){
+
+
+
+      }
+
       // 실행부
       init();
 
@@ -301,6 +307,18 @@
         // e.target : 클릭한 실제 대상
         $(e.target).removeClass('play').addClass('pause');
         $(e.target).text('Pause');
+      });
+
+      $(document).on('click', '.paging-item', function(e){
+
+        // 페이지 번호 클릭시 화면 맨위로 스크롤되지 않도록 기본 동작을 막아줌.
+        e.preventDefault();
+
+        // 클릭한 요소의 인덱스 번호 : index() 함수 사용
+        // 이벤트 대상이 on() 함수의 인자로 명시해주는 경우에 해당 대상이 $(this) 가 됨 ( 현재 : '.paging-item' )
+        var indexNumber = $(this).index('.paging-item');
+
+
       });
 
     });
