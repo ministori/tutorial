@@ -152,7 +152,9 @@
        * 3. 애니메이션 진행되지 않을 때 함수 실행 - if 구문, is() 함수
        * 4. 자동 롤링 - autoRolling()
        * 5. 화살표 클릭시 자동롤링 취소 기능, 이후 5초가 지나면 자동롤링 재시작
-       *
+       * 6. Play, Pause 버튼 기능 - 동적으로 추가된 클래스 인식하는 방법
+       * 7. 이미지 개수만큼 페이징 표시 추가하기 - paging()
+       * 8. 페이징 번호 클릭시 해당 이미지가 화면으로 슬라이딩 되게하는 함수
        *
        * */
 
@@ -163,6 +165,7 @@
         $('.view-image').eq(2).css({left : -400});
 
         marginCtrlWrap();
+        paging();
       }
 
       var currentIndex = 0;
@@ -227,6 +230,18 @@
 
       }
 
+      function paging(){
+
+        var imgNumber = $('.view-image').length; // size() 개수 구하는 함수
+
+        for(var i=0; i<imgNumber; i++){
+
+          $('.paging').append('<li class="paging-item"><a href="#" class="paging-link">' + (i+1) + '</a></li>');
+
+        }
+
+      }
+
       // 실행부
       init();
 
@@ -274,16 +289,18 @@
         }
       });
 
-      $('.btn-control.pause').on('click', function(){
+      $(document).on('click', '.btn-control.pause', function(e){
         clearInterval(timeID);
-        $(this).removeClass('pause').addClass('play');
-        $(this).text('Play');
+        // e.target : 클릭한 실제 대상
+        $(e.target).removeClass('pause').addClass('play');
+        $(e.target).text('Play');
       });
 
-      $('.btn-control.play').on('click', function(){
-        clearInterval(timeID);
-        $(this).removeClass('play');
-        $(this).text('Pause');
+      $(document).on('click', '.btn-control.play', function(e){
+        autoRolling();
+        // e.target : 클릭한 실제 대상
+        $(e.target).removeClass('play').addClass('pause');
+        $(e.target).text('Pause');
       });
 
     });
@@ -334,9 +351,9 @@
   <div class="control-wrap">
 
     <ul class="paging">
-      <li class="paging-item"><a href="#" class="paging-link">1</a></li>
-      <li class="paging-item"><a href="#" class="paging-link">2</a></li>
-      <li class="paging-item"><a href="#" class="paging-link">3</a></li>
+      <!--<li class="paging-item"><a href="#" class="paging-link">1</a></li>-->
+      <!--<li class="paging-item"><a href="#" class="paging-link">2</a></li>-->
+      <!--<li class="paging-item"><a href="#" class="paging-link">3</a></li>-->
     </ul>
 
     <div class="play-wrap">
