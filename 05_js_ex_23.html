@@ -68,6 +68,30 @@
       right:0;
     }
 
+    .control-wrap{
+      position:absolute;
+      left:50%;
+    }
+
+    .control-wrap:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+
+    .paging,
+    .play-wrap{
+      float:left;
+      margin:0;
+      padding:0;
+    }
+
+    .paging-item{
+      float:left;
+      list-style-type:none;
+      margin-right:10px;
+    }
+
   </style>
   <script src="lib/jquery-3.2.1.min.js"></script>
   <script>
@@ -127,6 +151,7 @@
        * 2. 슬라이딩 - moveLeft() / moveRight()
        * 3. 애니메이션 진행되지 않을 때 함수 실행 - if 구문, is() 함수
        * 4. 자동 롤링 - autoRolling()
+       * 5. 화살표 클릭시 자동롤링 취소 기능, 이후 5초가 지나면 자동롤링 재시작
        *
        *
        * */
@@ -136,6 +161,8 @@
         $('.view-image').eq(0).css({left : 0});
         $('.view-image').eq(1).css({left : 400});
         $('.view-image').eq(2).css({left : -400});
+
+        marginCtrlWrap();
       }
 
       var currentIndex = 0;
@@ -190,6 +217,16 @@
         }, 1000);
       }
 
+      function marginCtrlWrap(){
+
+        var wrapWidth = $('.control-wrap').width();
+
+        $('.control-wrap').css({
+          'margin-left' : -( wrapWidth / 2 )
+        });
+
+      }
+
       // 실행부
       init();
 
@@ -237,6 +274,18 @@
         }
       });
 
+      $('.btn-control.pause').on('click', function(){
+        clearInterval(timeID);
+        $(this).removeClass('pause').addClass('play');
+        $(this).text('Play');
+      });
+
+      $('.btn-control.play').on('click', function(){
+        clearInterval(timeID);
+        $(this).removeClass('play');
+        $(this).text('Pause');
+      });
+
     });
   </script>
 </head>
@@ -281,6 +330,22 @@
     <button type="button" class="arrow right">right</button>
 
   </div>
+
+  <div class="control-wrap">
+
+    <ul class="paging">
+      <li class="paging-item"><a href="#" class="paging-link">1</a></li>
+      <li class="paging-item"><a href="#" class="paging-link">2</a></li>
+      <li class="paging-item"><a href="#" class="paging-link">3</a></li>
+    </ul>
+
+    <div class="play-wrap">
+      <button type="button" class="btn-control pause">Pause</button>
+    </div>
+
+  </div>
+
+
 
 </div>
 
